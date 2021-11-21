@@ -7,7 +7,7 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o docs-build -s ./story-assets"
   },
   "dependencies": {
     "classnames": "^2.3.1",

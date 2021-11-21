@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { TextBlock } from './TextBlock';
 
 export default {
-    title: 'Layout/text/TextBlock',
+    title: 'components/common/text/TextBlock',
     argTypes: {
         align: {
             options: ['left', 'right', 'center'],

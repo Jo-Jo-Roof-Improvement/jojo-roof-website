@@ -1,10 +1,10 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Strip from './SmallStrip';
+import { WideStrip } from './WideStrip';
 
 export default {
-    title: 'Layout/Strips/SmallStrip',
+    title: 'components/common/strips/WideStrip',
     argTypes: {
         align: {
             options: ['left', 'right', 'center'],
@@ -12,9 +12,9 @@ export default {
         },
         children: { control: { type: 'text' } },
     },
-} as ComponentMeta<typeof Strip>;
+} as ComponentMeta<typeof WideStrip>;
 
-const Template: ComponentStory<typeof Strip> = (args) => <Strip {...args} />;
+const Template: ComponentStory<typeof WideStrip> = (args) => <WideStrip {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

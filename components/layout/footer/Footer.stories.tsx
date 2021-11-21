@@ -1,14 +1,14 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { HomePage } from './HomePage';
+import { Footer } from './Footer';
 
 export default {
-    title: 'components/pages/Home',
+    title: 'components/layout/footer',
     argTypes: {},
-} as ComponentMeta<typeof HomePage>;
+} as ComponentMeta<typeof Footer>;
 
-const Template: ComponentStory<typeof HomePage> = (args) => <HomePage {...args} />;
+const Template: ComponentStory<typeof Footer> = (args) => <Footer {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
