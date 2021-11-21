@@ -22,8 +22,10 @@ Primary.args = {
     align: 'left',
 };
 
-export const WithChildren = Template.bind({});
-WithChildren.args = {};
+export const WithRawText = Template.bind({});
+WithRawText.args = {
+    children: 'Hello World',
+};
 
 export const WithSparkleDecorators = Template.bind({});
 WithSparkleDecorators.args = {};
