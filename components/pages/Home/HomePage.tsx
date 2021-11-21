@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from './Home.module.css';
-import SmallStrip from '@components/layout/strips/SmallStrip'
+import styles from './HomePage.module.css';
+import SmallStrip from '@components/layout/strips/SmallStrip';
 
-const Home = () => {
+export const HomePage = () => {
     return (
         <div className={styles.container}>
             <Head>
@@ -72,5 +72,3 @@ const Home = () => {
         </div>
     );
 };
-
-export default Home;
