@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { PageHead } from './PageHead';
 
 export default {
-    title: 'compontents/layout/head/PageHead',
+    title: 'layout/head/Page Head',
     argTypes: {
         pageTitle: {
             control: 'text',

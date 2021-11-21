@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ServicesPage } from './ServicesPage';
 
 export default {
-    title: 'components/pages/Services',
+    title: 'Main Pages/Services',
     argTypes: {},
 } as ComponentMeta<typeof ServicesPage>;
 

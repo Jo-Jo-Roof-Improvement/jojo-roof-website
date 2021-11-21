@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { GalleryPage } from './GalleryPage';
 
 export default {
-    title: 'components/pages/Gallery',
+    title: 'Main Pages/Gallery',
     argTypes: {},
 } as ComponentMeta<typeof GalleryPage>;
 

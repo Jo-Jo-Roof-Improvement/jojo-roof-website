@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { NavigationBar } from './NavigationBar';
 
 export default {
-    title: 'components/layout/navigationBar/NavigationBar',
+    title: 'layout/navigationbar/Navigation Bar',
     argTypes: {
         pageTitle: {
             control: 'text',

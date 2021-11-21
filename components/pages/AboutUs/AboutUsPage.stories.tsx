@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { AboutUsPage } from './AboutUsPage';
 
 export default {
-    title: 'components/pages/About Us',
+    title: 'Main Pages/About Us',
     argTypes: {},
 } as ComponentMeta<typeof AboutUsPage>;
 

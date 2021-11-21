@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Layout } from './Layout';
 
 export default {
-    title: 'components/layout/Layout',
+    title: 'layout/Layout',
     argTypes: {
         pageTitle: {
             control: 'text',
