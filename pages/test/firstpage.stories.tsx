@@ -1,14 +1,14 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Strip from './Strip';
+import FirstPage from './firstpage';
 
 export default {
-    title: 'Layout/Strip',
+    title: 'Test/TestPage',
     argTypes: {},
-} as ComponentMeta<typeof Strip>;
+} as ComponentMeta<typeof FirstPage>;
 
-const Template: ComponentStory<typeof Strip> = (args) => <Strip {...args} />;
+const Template: ComponentStory<typeof FirstPage> = (args) => <FirstPage {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

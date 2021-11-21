@@ -1,10 +1,13 @@
-import React from "react";
+import { NextPage } from 'next';
+import React from 'react';
 
-export default class FirstPage extends React.Component<any, any> {
-    render() {
-        return <div>
+const FirstPage: NextPage = () => {
+    return (
+        <div>
             <h1>Hello World</h1>
             <p>This is a test page</p>
-        </div>;
-    }
-}
+        </div>
+    );
+};
+
+export default FirstPage;
