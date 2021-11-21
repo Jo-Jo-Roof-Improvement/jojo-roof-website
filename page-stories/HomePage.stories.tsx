@@ -1,14 +1,15 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+// import './Home.module.css';
 
-import FirstPage from './firstpage';
+import Home from '../pages/index';
 
 export default {
-    title: 'Test/TestPage',
+    title: 'Pages/Home',
     argTypes: {},
-} as ComponentMeta<typeof FirstPage>;
+} as ComponentMeta<typeof Home>;
 
-const Template: ComponentStory<typeof FirstPage> = (args) => <FirstPage {...args} />;
+const Template: ComponentStory<typeof Home> = (args) => <Home {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
