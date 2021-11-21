@@ -1,6 +1,5 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-// import './Home.module.css';
 
 import Home from '../pages/index';
 
