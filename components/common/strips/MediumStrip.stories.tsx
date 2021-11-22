@@ -26,6 +26,3 @@ export const WithRawText = Template.bind({});
 WithRawText.args = {
     children: 'Hello World',
 };
-
-export const WithSparkleDecorators = Template.bind({});
-WithSparkleDecorators.args = {};

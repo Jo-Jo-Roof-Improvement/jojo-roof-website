@@ -11,7 +11,7 @@ export const NavigationBar = () => {
 
     return (
         <div className={isScrolled ? 'bg-black' : 'bg-white'}>
-            <nav>A NavigationBar With Site Links</nav>
+            <nav style={{height: "136px", backgroundColor: 'rgba(23, 23, 23, 0.72)' }}>A NavigationBar With Site Links</nav>
         </div>
     );
 };

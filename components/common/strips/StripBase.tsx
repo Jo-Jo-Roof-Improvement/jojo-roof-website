@@ -11,8 +11,8 @@ export interface StripBaseProps {
 export const StripBase = ({ children, align, height, backgroundColor = "#a19393" }: StripBaseProps) => {
     return (
         <div
-            style={{ height, backgroundColor }}
-            className={cn('h-full flex items-center', {
+            style={{ minHeight: height, backgroundColor }}
+            className={cn('h-auto flex items-center', {
                 ['justify-start']: align === 'left',
                 ['justify-end']: align === 'right',
                 ['justify-center']: align === 'center' || align === undefined,
