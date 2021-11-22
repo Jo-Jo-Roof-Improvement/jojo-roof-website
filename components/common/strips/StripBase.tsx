@@ -1,13 +1,13 @@
 import cn from 'classnames';
 import style from './StripBase.module.css';
 
-export interface StripProps {
+export interface StripBaseProps {
     children: React.ReactNode;
     align?: 'left' | 'right' | 'center';
     height: string; // that ends in px or rem or some other unit
 }
 
-const Strip = ({ children, align, height }: StripProps) => {
+export const StripBase = ({ children, align, height }: StripBaseProps) => {
     return (
         <div
             style={{ height }}
@@ -21,5 +21,3 @@ const Strip = ({ children, align, height }: StripProps) => {
         </div>
     );
 };
-
-export default Strip;
