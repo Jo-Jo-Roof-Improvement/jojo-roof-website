@@ -1,5 +1,17 @@
+import { useEffect, useState } from 'react';
+
 export const NavigationBar = () => {
-    return (<div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">Some Stuff</nav>
-    </div>)
-}
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    const handleScroll = () => setIsScrolled(window.scrollY > 0);
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+    }, []);
+
+    return (
+        <div className={isScrolled ? 'bg-black' : 'bg-white'}>
+            <nav>A NavigationBar With Site Links</nav>
+        </div>
+    );
+};

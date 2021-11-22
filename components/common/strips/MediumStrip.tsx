@@ -1,5 +1,5 @@
 import React from 'react';
-import StripBase from './StripBase';
+import { StripBase } from './StripBase';
 
 export interface MediumStripProps {
     children: React.ReactNode;

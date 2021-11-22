@@ -1,4 +1,4 @@
-import StripBase from './StripBase';
+import { StripBase } from './StripBase';
 
 export interface WideStripProps {
     children: React.ReactNode;

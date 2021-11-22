@@ -5,16 +5,17 @@ export interface StripBaseProps {
     children: React.ReactNode;
     align?: 'left' | 'right' | 'center';
     height: string; // that ends in px or rem or some other unit
+    backgroundColor?: string; // a hex or rgb (or other that is compatible with the color style property)
 }
 
-export const StripBase = ({ children, align, height }: StripBaseProps) => {
+export const StripBase = ({ children, align, height, backgroundColor = "#a19393" }: StripBaseProps) => {
     return (
         <div
-            style={{ height }}
-            className={cn(style.stripbody, {
-                [style.left]: align === 'left',
-                [style.right]: align === 'right',
-                [style.center]: align === 'center' || align === undefined,
+            style={{ height, backgroundColor }}
+            className={cn('h-full flex items-center', {
+                ['justify-start']: align === 'left',
+                ['justify-end']: align === 'right',
+                ['justify-center']: align === 'center' || align === undefined,
             })}
         >
             {children}

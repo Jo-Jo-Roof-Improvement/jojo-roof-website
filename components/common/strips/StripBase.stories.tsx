@@ -1,11 +1,18 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import StripBase from './StripBase';
+import { StripBase } from './StripBase';
 
 export default {
     title: 'components/common/strips/StripBase',
     argTypes: {
+        height: {
+            options: ['40px', '500px'],
+            defaultValue: '40px',
+        },
+        backgroundColor: {
+            defaultValue: 'white',
+        },
         align: {
             options: ['left', 'right', 'center'],
             control: { type: 'select' },
@@ -25,7 +32,5 @@ Primary.args = {
 export const WithRawText = Template.bind({});
 WithRawText.args = {
     children: 'Hello World',
+    backgroundColor: '#ffffff',
 };
-
-export const WithSparkleDecorators = Template.bind({});
-WithSparkleDecorators.args = {};
