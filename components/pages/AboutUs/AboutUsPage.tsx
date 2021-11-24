@@ -1,6 +1,7 @@
-import { Layout } from "@components/layout/Layout";
-import React from "react";
+import { Layout } from '@components/layout/Layout';
+import { COMPANYNAME } from 'company';
+import React from 'react';
 
 export const AboutUsPage = () => {
-    return <Layout pageTitle="Jo Jos - About Us">About Us page!</Layout>;
+    return <Layout pageTitle={`${COMPANYNAME} - About Us`}>About Us page!</Layout>;
 };

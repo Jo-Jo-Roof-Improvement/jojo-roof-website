@@ -1,11 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import { MobileDrawerItems } from './MobileDrawerItems';
 import { MobileDrawer } from './MobileDrawerProps';
 import { NavBarLogoImage } from './NavBarLogoImageProps';
 import { UpperItemsSmall } from './UpperItemsPropsSmall';
 import { NavBarItemsBoxSmall } from './NavBarItemsBoxPropsSmall';
+import classNames from 'classnames';
+
+import styles from './NavigationBar.module.css';
+// import { NAV_BAR_DIV_ID } from 'constants';
 
 // https://stackoverflow.com/questions/51940157/how-to-align-horizontal-icon-and-text-in-mui
 // export interface NavigationBarProps {
@@ -51,8 +55,9 @@ import { NavBarItemsBoxSmall } from './NavBarItemsBoxPropsSmall';
 
 interface NavigationMainStripProps {
     imgSrc: string;
+    navHeightRef: React.MutableRefObject<HTMLDivElement>;
 }
-export const NavigationBar = ({ imgSrc }: NavigationMainStripProps) => {
+export const NavigationBar = ({ imgSrc, navHeightRef }: NavigationMainStripProps) => {
     const [open, setOpen] = useState(false);
 
     const toggleDrawer = (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -66,18 +71,26 @@ export const NavigationBar = ({ imgSrc }: NavigationMainStripProps) => {
         setOpen(!open);
     };
 
+    const [isScrolled, setIsScrolled] = useState(false);
+    const handleScroll = () => setIsScrolled(window.scrollY >= 40);
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <div className="bg-gray-400 visible md:invisible">
-            <MobileDrawer open={open} toggle={toggleDrawer}>
-                <MobileDrawerItems />
-            </MobileDrawer>
-            <NavBarItemsBoxSmall>
-                <UpperItemsSmall
-                    menuIcon={<MenuIcon onClick={toggleDrawer} className="md:invisible" />}
-                    phoneNumber="0433881760"
-                />
-                <NavBarLogoImage imgSrc={imgSrc} />
-            </NavBarItemsBoxSmall>
+        <div ref={navHeightRef} className={classNames(isScrolled ? 'fixed top-0' : 'absolute', 'w-full')}>
+            <div className="bg-gray-400 opacity-70 z-50 visible md:invisible">
+                <MobileDrawer open={open} toggle={toggleDrawer}>
+                    <MobileDrawerItems />
+                </MobileDrawer>
+                <NavBarItemsBoxSmall>
+                    <UpperItemsSmall
+                        menuIcon={<MenuIcon onClick={toggleDrawer} className="md:invisible" />}
+                        phoneNumber="0433881760"
+                    />
+                    <NavBarLogoImage imgSrc={imgSrc} />
+                </NavBarItemsBoxSmall>
+            </div>
         </div>
     );
 };
