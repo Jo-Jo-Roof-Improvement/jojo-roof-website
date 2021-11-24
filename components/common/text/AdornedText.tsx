@@ -11,41 +11,26 @@ export interface AdornedText {
 }
 
 export const AdornedText = ({ text, variant = 'body1', StartAdornment, EndAdornment, padAdornment }: AdornedText) => {
+    const adornmentStyle = {
+        verticalAlign: 'middle',
+        marginRight: padAdornment ? `${padAdornment}rem` : '0rem',
+        marginLeft: padAdornment ? `${padAdornment}rem` : '0rem',
+        height: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: '1.5rem',
+    };
+
     return (
         <div className="flex flex-row justify-around h-full">
-            {StartAdornment && (
-                <div
-                    style={{
-                        verticalAlign: 'middle',
-                        marginRight: padAdornment ? `${padAdornment}rem` : '0rem',
-                        height: '100%',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                    }}
-                >
-                    {StartAdornment}
-                </div>
-            )}
+            {StartAdornment && <div style={adornmentStyle}>{StartAdornment}</div>}
             <div>
-                <Typography align="center" variant={variant}>
+                <Typography justifyItems="center" alignItems="middle" variant={variant}>
                     {text}
                 </Typography>
             </div>
-            {EndAdornment && (
-                <div
-                    style={{
-                        marginLeft: padAdornment ? `${padAdornment}rem` : '0rem',
-                        verticalAlign: 'middle',
-                        height: '100%',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                    }}
-                >
-                    {EndAdornment}
-                </div>
-            )}
+            {EndAdornment && <div style={adornmentStyle}>{EndAdornment}</div>}
         </div>
     );
 };

@@ -12,7 +12,7 @@ export const StripBase = ({ children, align, height, backgroundColor = "#a19393"
     return (
         <div
             style={{ minHeight: height, backgroundColor }}
-            className={cn('h-auto flex items-center', {
+            className={cn('flex items-center', {
                 ['justify-start']: align === 'left',
                 ['justify-end']: align === 'right',
                 ['justify-center']: align === 'center' || align === undefined,

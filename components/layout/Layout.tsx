@@ -14,7 +14,7 @@ export const Layout = ({ children, pageTitle }: LayoutProps) => {
         <>
             <PageHead pageTitle={pageTitle} />
             <FreeQuoteToday />
-            <NavigationBar />
+            <NavigationBar imgSrc="/brand-images/logo.png" />
             {children}
             <Footer />
         </>

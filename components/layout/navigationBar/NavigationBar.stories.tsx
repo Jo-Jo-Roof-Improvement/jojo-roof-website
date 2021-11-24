@@ -6,7 +6,7 @@ import { NavigationBar } from './NavigationBar';
 export default {
     title: 'layout/navigationbar/Navigation Bar',
     argTypes: {
-        pageTitle: {
+        imgSrc: {
             control: 'text',
         },
     },
@@ -16,6 +16,5 @@ const Template: ComponentStory<typeof NavigationBar> = (args) => <NavigationBar 
 
 export const Primary = Template.bind({});
 Primary.args = {
-    children: <></>,
-    pageTitle: 'Test Title',
+    imgSrc: '/brand-images/logo.png',
 };

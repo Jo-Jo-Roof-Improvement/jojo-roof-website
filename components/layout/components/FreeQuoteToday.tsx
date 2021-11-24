@@ -10,7 +10,7 @@ export const FreeQuoteToday = () => {
                 StartAdornment={<FlareIcon />}
                 EndAdornment={<FlareIcon />}
                 padAdornment={1}
-                variant="h6"
+                variant="body2"
                 text="Get a Free Quote Today!"
             />
         </ThinStrip>
