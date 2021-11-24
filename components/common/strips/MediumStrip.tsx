@@ -2,7 +2,7 @@ import React from 'react';
 import { StripBase } from './StripBase';
 
 export interface MediumStripProps {
-    children: React.ReactNode;
+    children?: React.ReactNode;
     align?: 'left' | 'right' | 'center';
 }
 
