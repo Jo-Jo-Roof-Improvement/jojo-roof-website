@@ -53,7 +53,7 @@ interface NavigationMainStripProps {
     imgSrc: string;
 }
 export const NavigationBar = ({ imgSrc }: NavigationMainStripProps) => {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
 
     const toggleDrawer = (event: React.KeyboardEvent | React.MouseEvent) => {
         if (

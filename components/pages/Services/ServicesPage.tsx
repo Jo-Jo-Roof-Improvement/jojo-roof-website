@@ -1,3 +1,6 @@
+import { Layout } from '@components/layout/Layout';
+import React from 'react';
+
 export const ServicesPage = () => {
-    return <div>Services</div>;
+    return <Layout pageTitle="Jo Jos - Services">Services page!</Layout>;
 };
