@@ -25,11 +25,9 @@ export const AdornedText = ({ text, variant = 'body1', StartAdornment, EndAdornm
     return (
         <div className="flex flex-row justify-around h-full">
             {StartAdornment && <div style={adornmentStyle}>{StartAdornment}</div>}
-            <div>
-                <Typography justifyItems="center" alignItems="middle" variant={variant}>
-                    {text}
-                </Typography>
-            </div>
+            <Typography justifyItems="center" justifyContent="middle"className="pt-1" alignItems="middle" variant={variant}>
+                {text}
+            </Typography>
             {EndAdornment && <div style={adornmentStyle}>{EndAdornment}</div>}
         </div>
     );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import { DrawerItem } from "./DrawerItemProps";
+import { DrawerItem } from "./DrawerItem";
 import { Routes } from "./Routes";
 
 export const MobileDrawerItems = () => {

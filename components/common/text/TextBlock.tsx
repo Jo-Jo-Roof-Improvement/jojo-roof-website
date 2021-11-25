@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 export interface TextBlockProps extends TypographyProps {
-    children: React.ReactNode;
+    children?: React.ReactNode;
 }
 
 export const TextBlock = ({ children, ...rest }: TextBlockProps) => {
