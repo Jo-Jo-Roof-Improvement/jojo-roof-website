@@ -1,5 +1,5 @@
-import { TextBlock } from '@components/common/text/TextBlock';
 import React from 'react';
+import { PhoneText } from './PhoneTextProps';
 
 interface UpperItemsPropsSmall {
     menuIcon: React.ReactNode;
@@ -9,9 +9,7 @@ export const UpperItemsSmall = ({ menuIcon, phoneNumber }: UpperItemsPropsSmall)
     return (
         <div className="flex flex-row justify-between mb-4">
             <div>{menuIcon}</div>
-            <TextBlock variant="h5" className={'flex flex-grow-0 align-middle text-center'}>
-                {phoneNumber}
-            </TextBlock>
+            <PhoneText phoneNumber={phoneNumber} />
             <div className="flex invisible">Empty</div>
         </div>
     );
