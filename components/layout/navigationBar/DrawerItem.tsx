@@ -12,7 +12,7 @@ interface DrawerItemProps {
 export const DrawerItem = ({ text, href, divider = true, bold = false }: DrawerItemProps) => {
     return (
         <>
-            <TextBlock fontWeight={bold ? 300 : 500} className="pl-3 pt-3 pb-3 text-white" variant={bold ? 'h4' : 'h5'}>
+            <TextBlock fontWeight={bold ? 500 : 200} className="pl-3 pt-3 pb-3 text-white" variant={bold ? 'h4' : 'h5'}>
                 <Link href={href}>
                     <a>{text.toUpperCase()}</a>
                 </Link>

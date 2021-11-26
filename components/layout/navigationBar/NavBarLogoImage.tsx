@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import { Visibility } from '@mui/icons-material';
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
 import styles from './NavigationBar.module.css';
@@ -7,6 +6,7 @@ import styles from './NavigationBar.module.css';
 interface NavBarLogoImageProps {
     imgSrc: string;
     visibility: string; // using tailwindcss syntax - like md:visible or sm:invisible
+    containerClassName?: string;
 }
 export const NavBarLogoImage = ({ imgSrc, visibility }: NavBarLogoImageProps) => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -19,14 +19,23 @@ export const NavBarLogoImage = ({ imgSrc, visibility }: NavBarLogoImageProps) =>
         window.addEventListener('scroll', handleScroll);
     }, []);
     return (
-        <div
-            className={classNames(
-                `flex flex-row justify-center ${visibility}`,
-                isScrolled ? styles.squashedHeight : styles.fullHeight,
-                styles.transition
-            )}
-        >
-            <img src={imgSrc} alt="logo" className="object-contain" />
+            <div
+                className={classNames(
+                    `flex flex-row justify-start pl-2 pr-2 ${visibility}`,
+                    isScrolled ? styles.squashedHeight : styles.fullHeight,
+                    styles.transition
+                )}
+            >
+                <img src={imgSrc} alt="logo" className="object-contain" />
+            </div>
+    );
+};
+
+// finish wrapper
+export const NavBarLogoImageMediumLarge = ({ imgSrc, visibility, containerClassName }: NavBarLogoImageProps) => {
+    return (
+        <div className={containerClassName}>
+            <NavBarLogoImage imgSrc={imgSrc} visibility={visibility}></NavBarLogoImage>
         </div>
     );
 };

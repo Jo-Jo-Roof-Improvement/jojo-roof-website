@@ -1,5 +1,4 @@
 import React from 'react';
-import MenuIcon from '@mui/icons-material/Menu';
 import { MobileDrawerItems } from './MobileDrawerItems';
 import { MobileDrawer } from './MobileDrawer';
 import { NavBarLogoImage } from './NavBarLogoImage';
@@ -25,10 +24,10 @@ export const NavBarContents = ({ open, toggleDrawer, imgSrc, toggleInlineMenu }:
             </MobileDrawer>
             <NavBarItemsBox>
                 <NavBarBoxItems
-                    menuIcon={<MenuIcon onClick={toggleDrawer} />}
                     phoneNumber={PHONENUMBER}
                     imgSrc={imgSrc}
                     toggleInlineMenu={toggleInlineMenu}
+                    toggleDrawer={toggleDrawer}
                 />
                 <NavBarLogoImage imgSrc={imgSrc} visibility="md:hidden" />
             </NavBarItemsBox>

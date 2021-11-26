@@ -5,7 +5,7 @@ import { TextBlock } from '@components/common/text/TextBlock';
 export const CopyrightStrip = () => {
     return (
         <StripBase backgroundColor="rgb(207,207,212)" height="50px">
-            <TextBlock variant="body2" color="black">
+            <TextBlock fontFamily="Source Sans Pro" variant="h6" color="black">
                 Copyright © 2021 Jojo Roof Improvement - All Rights Reserved.
             </TextBlock>
         </StripBase>

@@ -2,20 +2,23 @@ import React from 'react';
 import { NavBarLogoImage } from './NavBarLogoImage';
 import { PhoneText } from './PhoneText';
 import { MenuLineItems } from './MenuLineItems';
+import MenuIcon from '@mui/icons-material/Menu';
 
 interface NavBarBoxItemsProps {
-    menuIcon: React.ReactNode;
     phoneNumber: string;
     imgSrc: string;
     toggleInlineMenu(): void;
+    toggleDrawer: (event: React.KeyboardEvent | React.MouseEvent) => void;
 }
-export const NavBarBoxItems = ({ menuIcon, phoneNumber, imgSrc, toggleInlineMenu }: NavBarBoxItemsProps) => {
+export const NavBarBoxItems = ({ phoneNumber, imgSrc, toggleDrawer, toggleInlineMenu }: NavBarBoxItemsProps) => {
     const SmallBlock = () => {
         return (
-            <div className="flex flex-row justify-between mb-4 md:hidden">
-                <div>{menuIcon}</div>
-                <PhoneText phoneNumber={phoneNumber} className="pr-8"/>
-                <div className="flex invisible">Empty</div>
+            <div className="flex flex-row flex-grow justify-between mb-4 md:hidden">
+                <div className="w-1/3">
+                    <MenuIcon onClick={toggleDrawer} className="text-white" />
+                </div>
+                <PhoneText phoneNumber={phoneNumber} className="text-white text-center" />
+                <div className="invisible w-1/3">Empty</div>
             </div>
         );
     };
@@ -23,9 +26,9 @@ export const NavBarBoxItems = ({ menuIcon, phoneNumber, imgSrc, toggleInlineMenu
     const MediumAndLargeBlock = () => {
         return (
             <div className="hidden md:flex md:flex-row items-center">
-                <NavBarLogoImage imgSrc={imgSrc} visibility="" />
+                <NavBarLogoImage containerClassName="w-1/4" imgSrc={imgSrc} visibility="" />
                 <MenuLineItems toggleInlineMenu={toggleInlineMenu} />
-                <PhoneText phoneNumber={phoneNumber} />
+                <PhoneText className="text-white w-1/4 justify-end pr-6 pl-2" phoneNumber={phoneNumber} />
             </div>
         );
     };

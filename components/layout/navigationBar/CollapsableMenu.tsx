@@ -7,7 +7,7 @@ import { JoMenu } from './JoMenu';
 import { JoMenuItem } from './JoMenuItem';
 import styles from './NavigationBar.module.css';
 
-export const CollapsableMenu = () => {
+export const CollapsableMenu = ({ fontSize }: { fontSize: string }) => {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -21,7 +21,12 @@ export const CollapsableMenu = () => {
     return (
         <div className="flex align-middle justify-center">
             <div className="flex flex-row items-center">
-                <TextBlock className="text-white" onClick={handleClick}>
+                <TextBlock
+                    fontFamily="Source Sans Pro"
+                    fontSize={fontSize}
+                    className="text-white pl-5"
+                    onClick={handleClick}
+                >
                     Plus
                 </TextBlock>
                 <KeyboardArrowDownIcon className="text-white" />
@@ -47,8 +52,8 @@ export const CollapsableMenu = () => {
                     href={Routes.AboutUs}
                     bold={router.pathname === Routes.AboutUs}
                 />
-                <JoMenuItem text="Gallery" href="/gallery" bold={router.pathname === Routes.Gallery} />
-                <JoMenuItem text="Contact Us" href="/contact-us" bold={router.pathname === Routes.ContactUs} />
+                <JoMenuItem text="Gallery" href={Routes.Gallery} bold={router.pathname === Routes.Gallery} />
+                <JoMenuItem text="Contact Us" href={Routes.ContactUs} bold={router.pathname === Routes.ContactUs} />
             </JoMenu>
         </div>
     );

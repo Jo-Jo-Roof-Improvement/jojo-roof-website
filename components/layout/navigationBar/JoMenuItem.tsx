@@ -13,7 +13,12 @@ export interface JoMenuItemProps extends MenuItemProps {
 export const JoMenuItem = ({ text, bold, href, textColor = 'text-white', ...rest }: JoMenuItemProps) => {
     return (
         <MenuItem {...rest}>
-            <TextBlock {...rest} fontWeight={bold ? 300 : 500} className="text-black">
+            <TextBlock
+                {...rest}
+                fontFamily="Source Sans Pro"
+                fontWeight={bold ? 500 : 200}
+                className="text-black"
+            >
                 <Link href={href}>
                     <a className={classNames('flex justify-middle text-center', textColor)}>{text}</a>
                 </Link>

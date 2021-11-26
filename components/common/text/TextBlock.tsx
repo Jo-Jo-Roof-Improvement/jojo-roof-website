@@ -4,8 +4,13 @@ import React from 'react';
 
 export interface TextBlockProps extends TypographyProps {
     children?: React.ReactNode;
+    className?: string;
 }
 
-export const TextBlock = ({ children, ...rest }: TextBlockProps) => {
-    return <Typography {...rest} className={classNames(rest.className, "text-fonts")}>{children}</Typography>;
+export const TextBlock = ({ children, className, ...rest }: TextBlockProps) => {
+    return (
+        <Typography {...rest} className={classNames(className)}>
+            {children}
+        </Typography>
+    );
 };
