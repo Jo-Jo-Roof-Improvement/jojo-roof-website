@@ -7,7 +7,7 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -s ./public -p 6006",
-    "build-storybook": "build-storybook -o docs-build -s ./story-assets"
+    "build-storybook": "build-storybook -o docs-build"
   },
   "dependencies": {
     "@emotion/react": "^11.6.0",
