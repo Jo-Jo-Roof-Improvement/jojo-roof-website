@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavBarLogoImage } from './NavBarLogoImage';
+import { NavBarLogoImage, NavBarLogoImageMediumLarge } from './NavBarLogoImage';
 import { PhoneText } from './PhoneText';
 import { MenuLineItems } from './MenuLineItems';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -25,8 +25,8 @@ export const NavBarBoxItems = ({ phoneNumber, imgSrc, toggleDrawer, toggleInline
 
     const MediumAndLargeBlock = () => {
         return (
-            <div className="hidden md:flex md:flex-row items-center">
-                <NavBarLogoImage containerClassName="w-1/4" imgSrc={imgSrc} visibility="" />
+            <div className="hidden md:flex md:flex-row md:items-center">
+                <NavBarLogoImageMediumLarge imgSrc={imgSrc} visibility="" position="float-left pl-3" containerClassName="w-1/4" />
                 <MenuLineItems toggleInlineMenu={toggleInlineMenu} />
                 <PhoneText className="text-white w-1/4 justify-end pr-6 pl-2" phoneNumber={phoneNumber} />
             </div>

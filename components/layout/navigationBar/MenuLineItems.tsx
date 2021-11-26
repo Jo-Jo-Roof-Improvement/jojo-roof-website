@@ -13,7 +13,7 @@ export const MenuLineItems = ({ toggleInlineMenu }: MenuLineItemsProps) => {
     const fontsize = '16pt';
     return (
         <>
-            <div className="lg:flex lg:flex-row lg:flex-grow lg:justify-center hidden">
+            <div className="lg:flex lg:flex-row lg:flex-grow lg:justify-center hidden w-1/2">
                 <JoDrawerMenuItem
                     fontSize={fontsize}
                     text="Home"

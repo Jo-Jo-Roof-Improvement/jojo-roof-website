@@ -6,7 +6,6 @@ import styles from './NavigationBar.module.css';
 interface NavBarLogoImageProps {
     imgSrc: string;
     visibility: string; // using tailwindcss syntax - like md:visible or sm:invisible
-    containerClassName?: string;
 }
 export const NavBarLogoImage = ({ imgSrc, visibility }: NavBarLogoImageProps) => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -19,23 +18,33 @@ export const NavBarLogoImage = ({ imgSrc, visibility }: NavBarLogoImageProps) =>
         window.addEventListener('scroll', handleScroll);
     }, []);
     return (
-            <div
-                className={classNames(
-                    `flex flex-row justify-start pl-2 pr-2 ${visibility}`,
-                    isScrolled ? styles.squashedHeight : styles.fullHeight,
-                    styles.transition
-                )}
-            >
-                <img src={imgSrc} alt="logo" className="object-contain" />
-            </div>
+        <div
+            // style={{ maxHeight: '80px' }}
+            className={classNames(
+                `w-1/2 mx-auto flex flex-row justify-center pl-2 pr-2 ${visibility}`,
+                isScrolled ? styles.squashedHeight : styles.fullHeight,
+                styles.transition
+            )}
+        >
+            <img src={imgSrc} alt="logo" className="object-contain" />
+        </div>
     );
 };
 
-// finish wrapper
-export const NavBarLogoImageMediumLarge = ({ imgSrc, visibility, containerClassName }: NavBarLogoImageProps) => {
+interface NavBarLogoImageMediumLargeProps extends NavBarLogoImageProps {
+    containerClassName?: string;
+    position: string;
+}
+
+export const NavBarLogoImageMediumLarge = ({
+    imgSrc,
+    visibility,
+    containerClassName,
+    position,
+}: NavBarLogoImageMediumLargeProps) => {
     return (
         <div className={containerClassName}>
-            <NavBarLogoImage imgSrc={imgSrc} visibility={visibility}></NavBarLogoImage>
+            <NavBarLogoImage imgSrc={imgSrc} visibility={`${visibility} ${position}`}></NavBarLogoImage>
         </div>
     );
 };
