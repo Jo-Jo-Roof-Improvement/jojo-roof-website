@@ -35,11 +35,7 @@ export const NavigationBar = ({ imgSrc, navBarRef }: NavigationBarProps) => {
     };
 
     return (
-        <div
-            ref={navBarRef}
-            style={{ maxHeight: '100px', zIndex: 100 }}
-            className={classNames(isScrolled ? 'fixed top-0' : 'absolute', 'w-full')}
-        >
+        <div ref={navBarRef} className={classNames('w-full z-50', isScrolled ? 'fixed top-0' : 'absolute')}>
             <NavBarContents
                 open={open}
                 imgSrc={imgSrc}

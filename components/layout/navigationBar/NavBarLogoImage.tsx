@@ -19,9 +19,8 @@ export const NavBarLogoImage = ({ imgSrc, visibility }: NavBarLogoImageProps) =>
     }, []);
     return (
         <div
-            // style={{ maxHeight: '80px' }}
             className={classNames(
-                `w-1/2 mx-auto flex flex-row justify-center pl-2 pr-2 ${visibility}`,
+                `w-auto mx-auto flex flex-row justify-center pl-2 pr-2 ${visibility}`,
                 isScrolled ? styles.squashedHeight : styles.fullHeight,
                 styles.transition
             )}

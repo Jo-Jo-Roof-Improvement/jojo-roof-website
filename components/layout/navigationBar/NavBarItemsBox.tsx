@@ -5,5 +5,5 @@ interface NavBarItemsBoxProps {
     children: React.ReactNode;
 }
 export const NavBarItemsBox = ({ children }: NavBarItemsBoxProps) => {
-    return <div className="p-5 h-3/4 sticky">{children}</div>;
+    return <div className="pl-5 pr-5 pt-5 pb-5 sticky">{children}</div>;
 };
