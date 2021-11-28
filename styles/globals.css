@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @import "~react-image-gallery/styles/scss/image-gallery.scss"; */
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+
 html,
 body {
     /* padding: 0;
@@ -20,4 +24,24 @@ a {
 
 * {
     /* box-sizing: border-box; */
+}
+
+.image-gallery {
+    width: 30%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.image-gallery-slide img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: cover;
+    overflow: hidden;
+    object-position: center center;
+}
+
+.fullscreen .image-gallery-slide img {
+    max-height: 100vh;
 }

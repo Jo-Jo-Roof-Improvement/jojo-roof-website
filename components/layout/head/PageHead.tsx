@@ -9,5 +9,6 @@ export const PageHead = ({ pageTitle }: PageHeadProps) => (
         <title>{pageTitle}</title>
         <meta name="description" content="Jo Jo Roof Improvement Home" />
         <link rel="icon" href="/brand-images/favicon.ico" />
+
     </Head>
 );
