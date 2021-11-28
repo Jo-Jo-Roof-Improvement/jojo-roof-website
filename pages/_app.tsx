@@ -1,5 +1,8 @@
 import '../styles/globals.css';
 
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import 'swiper/scss/pagination';
 
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from '@mui/system';

@@ -1,16 +1,26 @@
 import { Typography } from '@mui/material';
 import { Variant } from '@mui/material/styles/createTypography';
-import styles from './AdornedText.module.css';
+import classNames from 'classnames';
 
 export interface AdornedText {
-    text: string;
+    text?: string;
     StartAdornment?: React.ReactNode;
     EndAdornment?: React.ReactNode;
     variant?: Variant;
     padAdornment?: number;
+    textClassName?: string;
+    containerClassName?: string;
 }
 
-export const AdornedText = ({ text, variant = 'body1', StartAdornment, EndAdornment, padAdornment }: AdornedText) => {
+export const AdornedText = ({
+    text,
+    variant = 'body1',
+    StartAdornment,
+    EndAdornment,
+    padAdornment,
+    textClassName,
+    containerClassName,
+}: AdornedText) => {
     const adornmentStyle = {
         verticalAlign: 'middle',
         marginRight: padAdornment ? `${padAdornment}rem` : '0rem',
@@ -23,9 +33,15 @@ export const AdornedText = ({ text, variant = 'body1', StartAdornment, EndAdornm
     };
 
     return (
-        <div className="flex flex-row justify-around h-full">
+        <div className={classNames('flex flex-row justify-around h-full', containerClassName)}>
             {StartAdornment && <div style={adornmentStyle}>{StartAdornment}</div>}
-            <Typography justifyItems="center" justifyContent="middle"className="pt-1" alignItems="middle" variant={variant}>
+            <Typography
+                justifyItems="center"
+                justifyContent="middle"
+                className={classNames('pt-1', textClassName)}
+                alignItems="middle"
+                variant={variant}
+            >
                 {text}
             </Typography>
             {EndAdornment && <div style={adornmentStyle}>{EndAdornment}</div>}
