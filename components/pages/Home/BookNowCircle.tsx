@@ -12,7 +12,7 @@ export const BookNowCircle = ({ alignment, visibility }: BookNowCircleProps) => 
         <div
             style={{ borderColor: 'black', borderWidth: '2px', backgroundColor: '#CFCFD4' }}
             className={classNames(
-                'rounded-full h-72 w-72',
+                'rounded-full h-72 w-72 md:h-72 md:w-72',
                 ' flex flex-col justify-center text-center',
                 `${alignment}`,
                 `${visibility}`,

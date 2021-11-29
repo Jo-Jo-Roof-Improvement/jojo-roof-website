@@ -1,6 +1,6 @@
 import { TextBlock } from '@components/common/text/TextBlock';
+import classNames from 'classnames';
 import { VimeoVideo } from './VimeoVideo';
-
 
 export interface VideoWithTextBelowProps {
     src: string;
@@ -11,7 +11,7 @@ export interface VideoWithTextBelowProps {
 
 export const VideoWithTextBelow = ({ src, videoTitle, text, buttonText }: VideoWithTextBelowProps) => {
     return (
-        <div className="flex flex-col items-center justify-evenly w-full">
+        <div className={classNames('flex flex-col items-center justify-evenly w-full mr-4 ml-4')}>
             <VimeoVideo src={src} title={videoTitle} />
             <TextBlock align="center" color="white" paragraph>
                 {text}

@@ -13,7 +13,7 @@ export const JoDrawerMenuItem = ({ text, bold, href, ...rest }: JoMenuItemProps)
             {...rest}
             fontFamily="Source Sans Pro"
             fontWeight={bold ? 500 : 200}
-            className="ml-6 mr-6 mt-3 pb-3 text-white"
+            className="ml-3 mr-3 mt-3 pb-3 text-white"
             style={{ borderBottom: `${bold ? '2px' : '0px'} solid white`, ...rest.style }}
         >
             <Link href={href}>

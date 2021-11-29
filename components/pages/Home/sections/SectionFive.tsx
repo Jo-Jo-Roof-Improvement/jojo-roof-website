@@ -21,27 +21,33 @@ export const SectionFive = ({ reviews }: SectionFiveProps) => {
 
     return (
         <WideStrip align="center" height="300px" backgroundColor="white" className="flex flex-col justify-center">
-            <div className="pl-16 pr-16 pb-10 flex flex-col justify-center items-center">
-                <TitleTextBlock
-                    className="bg-white mb-16"
-                    variant="h3"
-                    fontColor="black"
-                    title="What customers are saying"
-                />
+            <TitleTextBlock
+                className="bg-white mb-16"
+                variant="h3"
+                fontColor="black"
+                title="What customers are saying"
+            />
+            <div className="pl-16 pr-16 pb-5 pt-4 mb-10 flex flex-col justify-center items-center border-2">
                 <TextBlock align="center" className="mb-10" fontSize="18pt">
-                    JOJO Roof Improvement - Roof restoration, Roof cleaning, Repointing, Rebedding, Roof painting, Roof
-                    leaks repair, Roof repair, Gutters cleaning, Valley, Melbourne - Australia.
+                    JOJO Roof Improvement
                 </TextBlock>
-                <div className="flex flex-row justify-around w-14">
-                    <TextBlock align="center" className="mb-10" fontSize="20pt">
-                        {currentRating}
+                <TextBlock fontSize="32pt">
+                    {currentRating} / 5
+                    <TextBlock fontSize="12pt" align="center">
+                        stars
                     </TextBlock>
-                    {currentRating && <Rating value={currentRating} readOnly />}
-                </div>
+                </TextBlock>
+                {currentRating && <Rating value={currentRating} readOnly className="pt-3 pb-3" />}
+
+                <TextBlock>On</TextBlock>
+                <TextBlock paragraph>Google Maps</TextBlock>
                 <div>
-                    <Link href="https://www.google.com/maps/place/JOJO+Roof+Improvements/@-37.8669157,145.0002967,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xfaa002d92261e221!8m2!3d-37.8669157!4d145.0024854">
+                    <Link
+                        style={{ textDecoration: 'none' }}
+                        href="https://www.google.com/maps/place/JOJO+Roof+Improvements/@-37.8669157,145.0002967,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xfaa002d92261e221!8m2!3d-37.8669157!4d145.0024854"
+                    >
                         <a>
-                            <TextBlock>All Google Reviews</TextBlock>
+                            <TextBlock>See all reviews on Google Maps</TextBlock>
                         </a>
                     </Link>
                 </div>

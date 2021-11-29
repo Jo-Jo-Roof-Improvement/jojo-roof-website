@@ -4,7 +4,7 @@ import { FullWidthImage } from '../TopImage';
 
 export const SectionOne = () => {
     return (
-        <div>
+        <div className="sticky">
             <FullWidthImage src="/images/image-1.jpg" />
             <BookNowCircleContainer />
         </div>

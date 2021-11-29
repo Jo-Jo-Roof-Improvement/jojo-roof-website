@@ -24,7 +24,7 @@ export const Layout = ({ children, pageTitle }: LayoutProps) => {
             <PageHead pageTitle={pageTitle} />
             <FreeQuoteToday />
             <NavigationBar imgSrc="/brand-images/logo.png" navBarRef={ref} />
-            <div style={{ height: navBarHeight }}></div>
+            <div style={{ height: navBarHeight }} className="w-full"></div>
             {children}
             <Footer />
         </>

@@ -12,10 +12,10 @@ export const SectionThree = () => {
             backgroundColor="rgb(207,207,212)"
             className="flex flex-col items-center w-full lg:flex-row"
         >
-            <div className="flex w-1/2 lg:hidden">
+            <div className="flex md:w-full lg:hidden">
                 <FullWidthImage src="/images/image-2-cropped.jpg" objectPosition="20% 0" />
             </div>
-            <div className="pl-32 pr-32 flex flex-col items-center lg:w-1/2">
+            <div className="pl-5 pr-5 flex flex-col items-center md:w-2/3">
                 <div className="w-full">
                     <TitleTextBlock
                         variant="h4"

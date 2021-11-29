@@ -9,7 +9,7 @@ export interface StripBaseProps {
     className?: string;
 }
 
-export const StripBase = ({ children, align, height, backgroundColor = '#a19393', className = '' }: StripBaseProps) => {
+export const StripBase = ({ children, align = "center", height, backgroundColor = '#a19393', className = '' }: StripBaseProps) => {
     return (
         <div
             style={{ minHeight: height, backgroundColor }}
