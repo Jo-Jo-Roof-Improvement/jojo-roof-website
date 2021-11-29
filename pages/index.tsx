@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { HomePage, HomePageProps } from '@components/pages/Home/HomePage';
 import { getGalleryPhotos } from 'lib/galleryPhotos';
 import { getReviews } from 'lib/reviews';

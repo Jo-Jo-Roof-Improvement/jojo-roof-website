@@ -4,10 +4,10 @@ import { TitleTextBlock } from '../TitleTextBlock';
 import { GoogleReview } from 'types';
 import { Link, Rating } from '@mui/material';
 import { SCREEN_LARGE, SCREEN_MEDIUM, SCREEN_SMALL } from 'styles/theme';
-import SwiperCore, { Pagination } from 'swiper';
 import { TextBlock } from '@components/common/text/TextBlock';
 import { ReviewGallery } from '@components/common/reviews/ReviewGallery';
-SwiperCore.use([Pagination]);
+import SwiperCore, { Pagination, Navigation, Lazy, Controller } from 'swiper';
+SwiperCore.use([Pagination, Navigation, Lazy, Controller]);
 
 export interface SectionFiveProps {
     reviews: GoogleReview[];

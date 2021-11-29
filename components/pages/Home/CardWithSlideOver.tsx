@@ -7,6 +7,7 @@ import { format } from 'date-fns';
 import GoogleIcon from '@mui/icons-material/Google';
 import { AdornedText } from '@components/common/text/AdornedText';
 import { TitleTextBlock } from './TitleTextBlock';
+import classNames from 'classnames';
 
 export interface CardWithSlideOverProps {
     review: GoogleReview;
@@ -20,7 +21,7 @@ export const CardWithSlideOver = ({ review }: CardWithSlideOverProps) => {
 
     return (
         <>
-            <Paper className="flex flex-col justify-evenly items-center h-96 border-2 w-72 pl-3 pr-3">
+            <Paper className={classNames('flex flex-col justify-evenly items-center h-96 border-2 w-72 pl-3 pr-3')}>
                 <div className="rounded-full bg-blue-500" style={{ height: '75px', width: '75px' }}>
                     <img src={review.profile_photo_url} alt="test" />
                 </div>
@@ -46,27 +47,13 @@ export const CardWithSlideOver = ({ review }: CardWithSlideOverProps) => {
                 <TitleTextBlock
                     className="pl-10 pr-10"
                     fontColor="black"
-                    variant="h4"
+                    variant="h5"
                     title={`${review.author_name} says...`}
                 ></TitleTextBlock>
-                <TextBlock justifyContent="left" fontWeight="200" className="p-10">
+                <TextBlock justifyContent="left" fontWeight="200" className="p-10" color="black">
                     {review.text}
                 </TextBlock>
             </Dialog>
         </>
-    );
-};
-
-export interface ReviewCardsProps {
-    reviews: GoogleReview[];
-}
-
-export const ReviewCards = ({ reviews }: ReviewCardsProps) => {
-    return (
-        <div className="flex flex-row justify-evenly">
-            {reviews.map((review, index) => (
-                <CardWithSlideOver review={review} key={index} />
-            ))}
-        </div>
     );
 };

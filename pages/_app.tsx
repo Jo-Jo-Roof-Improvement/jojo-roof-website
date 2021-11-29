@@ -4,10 +4,10 @@ import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 
+import React from 'react';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from '@mui/system';
 import { theme } from 'styles/theme';
-import React from 'react';
 import { CssBaseline } from '@mui/material';
 
 function MyApp({ Component, pageProps }: AppProps) {

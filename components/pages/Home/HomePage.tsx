@@ -2,12 +2,12 @@
 import { Layout } from '@components/layout/Layout';
 import { COMPANYNAME } from 'company';
 import React from 'react';
-import { SectionFour } from './sections/SectionFour';
 import { SectionThree } from './sections/SectionThree';
 import { SectionOne } from './sections/SectionOne';
 import { SectionTwo } from './sections/SectionTwo';
 import { SectionFive } from './sections/SectionFive';
 import { GoogleReview } from 'types';
+import { SectionFour } from './sections/SectionFour';
 
 export interface HomePageProps {
     galleryPhotoList: { original: string }[];

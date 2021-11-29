@@ -1,9 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 import { WideStrip } from '@components/common/strips/WideStrip';
 import React, { LegacyRef, useRef } from 'react';
 import { TitleTextBlock } from '../TitleTextBlock';
-import ImageGallery from 'react-image-gallery';
-import ReactImageGallery from 'react-image-gallery';
 
+import ReactImageGallery from 'react-image-gallery';
+// import { ManipulatingSwiper } from '../AlternateGallery';
 export interface SectionFourProps {
     galleryPhotoList: { original: string }[];
 }
@@ -14,14 +15,28 @@ export const SectionFour = ({ galleryPhotoList }: SectionFourProps) => {
         return <div>WHAT THE HECK IS THIS - can I make the faded previews on left and right using this?? </div>;
     };
 
+    const images = galleryPhotoList.map((x) => ({ src: x.original }));
+
     return (
-        <WideStrip align="center" height="300px" backgroundColor="black">
-            <div className="w-full">
-                <TitleTextBlock className="pb-20" variant="h3" fontColor="white" title="Photo Gallery" />
-                <div className="mx-auto mb-12 h-auto">
-                    <ImageGallery renderCustomControls={renderCustomControls} ref={ref} items={galleryPhotoList} />
+        <>
+            <WideStrip align="center" height="300px" backgroundColor="black">
+                <div className="w-full">
+                    <TitleTextBlock className="pb-20" variant="h3" fontColor="white" title="Photo Gallery" />
+                    <div className="flex mb-12 h-full w-full">
+                        <ReactImageGallery
+                            renderCustomControls={renderCustomControls}
+                            ref={ref}
+                            items={galleryPhotoList}
+                        />
+                    </div>
                 </div>
-            </div>
-        </WideStrip>
+            </WideStrip>
+
+            {/* <WideStrip align="center" height="300px" backgroundColor="gray">
+                <div className="w-full">
+                    <ManipulatingSwiper images={images} />
+                </div>
+            </WideStrip> */}
+        </>
     );
 };

@@ -7,7 +7,7 @@ export const ServicesSectionSix = () => {
         <>
             <TextBlock paragraph>
                 Painting your roof tiles is more important that we might think. The sealer, paint or glaze provide
-                protection against ultraviolet and infrared heat degradation. Indeed coating reflect sun's ray and can
+                protection against ultraviolet and infrared heat degradation. Indeed coating reflect sun&apos;s ray and can
                 keep the temperature of your roof constant. Prolonging its lifespan. This will also prevent any future
                 bacteria, moss, lichen, dirt and others natural elements to grow on the roof.
             </TextBlock>

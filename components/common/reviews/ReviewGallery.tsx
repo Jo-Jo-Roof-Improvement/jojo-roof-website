@@ -4,8 +4,7 @@ import { GoogleReview } from 'types';
 import { useMediaQuery, useTheme } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-
-export const ReviewGallery = ({ reviews }: { reviews: GoogleReview[]; }) => {
+export const ReviewGallery = ({ reviews }: { reviews: GoogleReview[] }) => {
     const theme = useTheme();
 
     const matchesSmall = useMediaQuery(theme.breakpoints.between('xs', 'sm'));

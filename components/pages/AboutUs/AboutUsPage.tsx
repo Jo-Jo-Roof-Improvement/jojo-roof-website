@@ -31,7 +31,9 @@ export const AboutUsSectionFour = () => {
             <AdornedText
                 textClassName="text-white"
                 variant="h6"
-                EndAdornment={<ArrowForwardIosIcon style={{ color: 'white', fontSize: '14pt' }} className="flex mt-2 ml-2" />}
+                EndAdornment={
+                    <ArrowForwardIosIcon style={{ color: 'white', fontSize: '14pt' }} className="flex mt-2 ml-2" />
+                }
                 text="Check them out"
                 containerClassName="pb-10"
             />

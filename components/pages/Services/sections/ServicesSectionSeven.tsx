@@ -2,13 +2,12 @@ import React from 'react';
 import { ServiceSection } from '../ServiceSection';
 import { TextBlock } from '@components/common/text/TextBlock';
 
-
 export const ServicesSectionSeven = () => {
     const body = (
         <>
             <TextBlock paragraph>
-                A valley is the place where two major roofs meet or where the roof's direction changes. Made with zinc
-                or colorbond metal. Valleys leads the water to the gutters.
+                A valley is the place where two major roofs meet or where the roof&apos;s direction changes. Made with
+                zinc or colorbond metal. Valleys leads the water to the gutters.
             </TextBlock>
             <TextBlock paragraph>
                 It is important to replace the valleys when they start to get rusted. Indeed after a while, the rusted
@@ -30,6 +29,7 @@ export const ServicesSectionSeven = () => {
             header="WHAT ARE VALLEYS AND STORM SEAL?"
             body={body}
             imageSrc="/images/image-3.jpg"
-            backgroundColor="rgb(22,22,22)" />
+            backgroundColor="rgb(22,22,22)"
+        />
     );
 };

@@ -10,11 +10,13 @@ export interface AdornedText {
     padAdornment?: number;
     textClassName?: string;
     containerClassName?: string;
+    fontVariant?: 'primary' | 'secondary';
 }
 
 export const AdornedText = ({
     text,
     variant = 'body1',
+    fontVariant = 'primary',
     StartAdornment,
     EndAdornment,
     padAdornment,
@@ -36,6 +38,7 @@ export const AdornedText = ({
         <div className={classNames('flex flex-row justify-around h-full', containerClassName)}>
             {StartAdornment && <div style={adornmentStyle}>{StartAdornment}</div>}
             <Typography
+                fontFamily={fontVariant === 'primary' ? 'Fjalla One' : 'Source Sans Pro'}
                 justifyItems="center"
                 justifyContent="middle"
                 className={classNames('pt-1', textClassName)}

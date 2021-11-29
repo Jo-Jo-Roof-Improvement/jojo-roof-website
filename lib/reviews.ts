@@ -7,7 +7,7 @@ const GOOGLE_PLACES_API_REVIEWS = (apiKey: string, placeId: string) => {
 export async function getReviews() {
     const response = await fetch(
         // GOOGLE_PLACES_API_REVIEWS(process.env.REACT_APP_GOOGLE_API_KEY, 'ChIJN1t_tDeuEmsRUsoyG83frY4')
-        GOOGLE_PLACES_API_REVIEWS('AIzaSyDlyfDY3pRsBWPh_o3wfshqShxjMcTlqcc', 'ChIJN1t_tDeuEmsRUsoyG83frY4')
+        GOOGLE_PLACES_API_REVIEWS('AIzaSyBi2f37vN-5tpaV3koEmoTK2RENKJ1SntU', 'ChIJN1t_tDeuEmsRUsoyG83frY4')
     );
     const data = await response.json();
     const reviews = data.result.reviews as GoogleReview[];
