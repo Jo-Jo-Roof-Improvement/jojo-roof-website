@@ -7,6 +7,7 @@ const SCREEN_XLARGE = require('styles/theme/SCREENS_XLARGE');
 // module.exports = () => {
 const config = {
     // purge: [],
+    mode: 'jit',
     purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
     darkMode: false, // or 'media' or 'class'
     theme: {
