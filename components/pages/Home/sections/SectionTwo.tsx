@@ -6,8 +6,8 @@ import { VideoWithTextBelow } from '../VideoWithTextBelow';
 export const SectionTwo = () => {
     return (
         <WideStrip align="center" height="300px">
-            <div className="flex flex-col items-center w-full mb-10">
-                <TitleTextBlock title="Your ROOF is your home's MAIN DEFENCE" />
+            <div className="flex flex-col items-center w-full mb-5">
+                <TitleTextBlock title="Your ROOF is your home's MAIN DEFENCE" className="pl-2 pr-2"  />
                 <div className="flex flex-col md:flex-row w-full">
                     <VideoWithTextBelow
                         src="//player.vimeo.com/video/589829430?autoplay=0&amp;title=0&amp;portrait=0&amp;byline=0&amp;badge=0"

@@ -11,26 +11,28 @@ export interface FullWidthImageProps {
     height?: string; // height: '100%';
     containerClassName?: string;
     className?: string;
+    width?: string; // width: '100%';
 }
 export const FullWidthImage = ({
     src,
     alt = 'roof',
     objectPosition = '50% 0',
     height = '600px',
+    width = '100%',
     objectFit = 'cover',
     containerClassName = '',
     className = '',
 }: FullWidthImageProps) => {
     return (
-        <div className={classNames('bg-black', containerClassName)}>
-            <div className="w-full h-auto">
+        // <div className={classNames('bg-black', containerClassName)}>
+            <div className="bg-black w-full h-auto">
                 <img
                     className={className}
                     src={src}
                     alt={alt}
-                    style={{ width: '100%', height, objectFit, objectPosition: objectPosition }}
+                    style={{ width, height, objectFit, objectPosition: objectPosition }}
                 />
             </div>
-        </div>
+        // </div>
     );
 };

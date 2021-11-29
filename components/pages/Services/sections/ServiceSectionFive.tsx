@@ -23,7 +23,10 @@ export const ServiceSectionFive = () => {
             </TextBlock>
             <JoList>
                 {listItems.map((item, index) => (
-                    <JoListItem key={index}>item</JoListItem>
+                    <div className="flex flex-row" key={index}>
+                        <span className="pr-3">{' - '}</span>
+                        <JoListItem key={index}>{item}</JoListItem>
+                    </div>
                 ))}
             </JoList>
             <TextBlock paragraph>

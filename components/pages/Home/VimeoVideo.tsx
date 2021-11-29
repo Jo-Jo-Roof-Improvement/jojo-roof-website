@@ -1,10 +1,13 @@
+import classNames from 'classnames';
+
 export interface VimeoVideoProps {
     src: string; // link to vimeo video
     title: string;
+    frameClassName?: string;
 }
-export const VimeoVideo = ({ src, title = 'Vimeo Video' }: VimeoVideoProps) => {
+export const VimeoVideo = ({ src, title = 'Vimeo Video', frameClassName = '' }: VimeoVideoProps) => {
     return (
-        <div className="flex w-full h-96 mt-10 mb-10">
+        <div className={classNames('flex w-full h-96', frameClassName)}>
             <iframe
                 datatype="video/vimeo"
                 src={src}

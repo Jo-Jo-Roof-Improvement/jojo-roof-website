@@ -14,9 +14,9 @@ export interface ServiceSectionProps {
 }
 export const ServiceSection = ({ title, textColor, header, body, imageSrc, backgroundColor }: ServiceSectionProps) => {
     return (
-        <WideStrip backgroundColor={backgroundColor} className="flex flex-col">
-            <TitleTextBlock fontColor={textColor} title={title} marginTop="0px" />
-            <div className="flex flex-col md:flex-row pl-8 pr-8 items-center">
+        <WideStrip backgroundColor={backgroundColor} className="flex flex-col pb-10">
+            <TitleTextBlock fontColor={textColor} title={title} marginTop="" containerClassName="pt-10 md:pt-0" />
+            <div className="flex flex-col md:flex-row pl-8 pr-8 pt-10 items-center">
                 <div className="pl-8 pr-8">
                     <TitleTextBlock
                         variant="h6"
@@ -30,11 +30,11 @@ export const ServiceSection = ({ title, textColor, header, body, imageSrc, backg
                     </TextBlock>
                 </div>
                 <FullWidthImage
-                    containerClassName="pl-8"
+                    containerClassName=""
                     src={imageSrc}
-                    objectPosition="50% 0"
-                    height="300px"
-                    objectFit="contain"
+                    height="250px"
+                    objectPosition="50%"
+                    objectFit="cover"
                 />
             </div>
         </WideStrip>
