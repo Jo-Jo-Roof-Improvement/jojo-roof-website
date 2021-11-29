@@ -52,7 +52,9 @@ export const SectionFive = ({ reviews }: SectionFiveProps) => {
                     </Link>
                 </div>
             </div>
-            <ReviewGallery reviews={reviews} />
+            <div className="w-full">
+                <ReviewGallery reviews={reviews} />
+            </div>
         </WideStrip>
     );
 };

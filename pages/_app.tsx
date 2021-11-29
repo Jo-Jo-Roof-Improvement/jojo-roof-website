@@ -1,8 +1,8 @@
 import '../styles/globals.css';
 
-import 'swiper/scss';
-import 'swiper/scss/navigation';
-import 'swiper/scss/pagination';
+import 'swiper/swiper.scss';
+import 'swiper/swiper-bundle.min.css';
+import 'swiper/swiper.min.css';
 
 import React from 'react';
 import type { AppProps } from 'next/app';
