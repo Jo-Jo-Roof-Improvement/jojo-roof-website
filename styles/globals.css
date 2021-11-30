@@ -26,7 +26,6 @@ a {
 
 .image-gallery {
     width: 100%;
-    height: auto;
     text-align: center;
     margin: 0 auto;
 }
@@ -41,7 +40,7 @@ a {
 }
 
 .fullscreen .image-gallery-slide img {
-    max-height: 100vh;
+    max-height: 750vh;
 }
 
 .swiper {
