@@ -18,7 +18,6 @@ export const SectionFive = ({ reviews }: SectionFiveProps) => {
             reviews.map((x: GoogleReview) => x.rating).reduce((a: number, b: number) => a + b, 0) / reviews.length
         ).toFixed(1)
     );
-
     return (
         <WideStrip align="center" height="300px" backgroundColor="white" className="flex flex-col justify-center">
             <TitleTextBlock
@@ -31,28 +30,23 @@ export const SectionFive = ({ reviews }: SectionFiveProps) => {
                 <TextBlock align="center" className="mb-10" fontSize="18pt">
                     JOJO Roof Improvement
                 </TextBlock>
-                <TextBlock fontSize="32pt">
-                    {currentRating} / 5
-                    <TextBlock fontSize="12pt" align="center">
-                        stars
-                    </TextBlock>
+                <TextBlock fontSize="32pt">{currentRating} / 5</TextBlock>
+                <TextBlock fontSize="12pt" align="center">
+                    stars
                 </TextBlock>
                 {currentRating && <Rating value={currentRating} readOnly className="pt-3 pb-3" />}
 
                 <TextBlock>On</TextBlock>
                 <TextBlock paragraph>Google Maps</TextBlock>
-                <div>
-                    <Link
-                        style={{ textDecoration: 'none' }}
-                        href="https://www.google.com/maps/place/JOJO+Roof+Improvements/@-37.8669157,145.0002967,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xfaa002d92261e221!8m2!3d-37.8669157!4d145.0024854"
-                    >
-                        <a>
-                            <TextBlock>See all reviews on Google Maps</TextBlock>
-                        </a>
-                    </Link>
-                </div>
+
+                <Link
+                    style={{ textDecoration: 'none', fontFamily: 'Source Sans Pro' }}
+                    href="https://www.google.com/maps/place/JOJO+Roof+Improvements/@-37.8669157,145.0002967,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0xfaa002d92261e221!8m2!3d-37.8669157!4d145.0024854"
+                >
+                    See all reviews on Google Maps
+                </Link>
             </div>
-            <div className="w-full">
+            <div className="w-full mb-5">
                 <ReviewGallery reviews={reviews} />
             </div>
         </WideStrip>

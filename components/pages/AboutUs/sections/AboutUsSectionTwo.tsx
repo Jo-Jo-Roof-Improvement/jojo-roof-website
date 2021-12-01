@@ -17,7 +17,7 @@ export const AboutUsSectionTwo = () => {
                 <SuccessInfo
                     title="Completed Projects"
                     criticalHit="200 +"
-                    text="Since we started, we have participated in the roof restoration of more than 200 homes in Australia"
+                    text="Since starting, we have participated in the roof restoration of more than 200 homes in Australia"
                 />
                 {MarginedDivider}
                 <SuccessInfo

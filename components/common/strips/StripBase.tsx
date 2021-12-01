@@ -7,12 +7,13 @@ export interface StripBaseProps {
     height?: string; // that ends in px or rem or some other unit
     backgroundColor?: string; // a hex or rgb (or other that is compatible with the color style property)
     className?: string;
+    maxHeight?: string;
 }
 
-export const StripBase = ({ children, align = "center", height, backgroundColor = '#a19393', className = '' }: StripBaseProps) => {
+export const StripBase = ({ children, align = "center", height, maxHeight = "1000px", backgroundColor = '#a19393', className = '' }: StripBaseProps) => {
     return (
         <div
-            style={{ minHeight: height, backgroundColor }}
+            style={{ minHeight: height, backgroundColor, maxHeight: maxHeight }}
             className={cn(
                 'flex items-center w-full',
                 {

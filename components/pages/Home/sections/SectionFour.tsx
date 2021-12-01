@@ -11,10 +11,6 @@ export interface SectionFourProps {
 export const SectionFour = ({ galleryPhotoList }: SectionFourProps) => {
     const ref = useRef() as LegacyRef<ImageGallery>;
 
-    const renderCustomControls = () => {
-        return <div>WHAT THE HECK IS THIS - can I make the faded previews on left and right using this?? </div>;
-    };
-
     // const images = galleryPhotoList.map((x) => ({ src: x.original }));
 
     return (
@@ -23,11 +19,7 @@ export const SectionFour = ({ galleryPhotoList }: SectionFourProps) => {
                 <div className="w-full h-2/3">
                     <TitleTextBlock className="pb-20" variant="h3" fontColor="white" title="Photo Gallery" />
                     <div className="flex mb-12 w-full">
-                        <ImageGallery
-                            renderCustomControls={renderCustomControls}
-                            ref={ref}
-                            items={galleryPhotoList}
-                        />
+                        <ImageGallery ref={ref} items={galleryPhotoList} />
                     </div>
                 </div>
             </WideStrip>

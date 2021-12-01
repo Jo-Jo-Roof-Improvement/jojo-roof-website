@@ -5,7 +5,7 @@ import { GoogleReview } from 'types';
 export async function getStaticProps() {
     const reviews = await getReviews();
 
-    return { props: { reviews, fallback:false } };
+    return { props: { reviews } };
 }
 
 export default function AboutUs({ reviews }: { reviews: GoogleReview[] }) {

@@ -24,7 +24,7 @@ export const BookNowCircle = ({ alignment, visibility }: BookNowCircleProps) => 
             </TextBlock>
             <JoButton
                 style={{ borderRadius: '0px', backgroundColor: 'rgba(22, 22, 22, 1.0)', boxShadow: '6px 6px darkgray' }}
-                className="text-center w-1/2 mx-auto mt-2 text-white text-lg "
+                className="text-center w-1/2 mx-auto mt-2 text-white"
             >
                 Book Now
             </JoButton>
