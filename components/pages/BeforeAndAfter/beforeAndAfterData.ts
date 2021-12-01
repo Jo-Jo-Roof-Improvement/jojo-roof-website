@@ -5,10 +5,10 @@ export const beforeAndAfterData = [
         textColor: 'black',
         backgroundColor: 'gray',
         listItems: [
-            'Roof tiles/Gutters high pressure cleaning',
-            'Ridge capping/collars/valleys and gable repointing with flexible cement',
+            'Roof tiles & Gutters high pressure cleaning',
+            'Ridge capping & collars & valleys and gable repointing with flexible cement',
             'Roof tiles painting Resine Dark Charcoal ',
-            'Broken/chipped tiles replacement',
+            'Broken & chipped tiles replacement',
         ],
     },
     {
@@ -17,9 +17,9 @@ export const beforeAndAfterData = [
         textColor: 'gray',
         backgroundColor: 'white',
         listItems: [
-            'Roof tiles/Gutters high pressure cleaning',
-            'Ridge capping/collars repointing with flexible cement',
-            'Replacement/Installation colorbond valley gutter & valley seal',
+            'Roof tiles & gutters high pressure cleaning',
+            'Ridge capping & collars repointing with flexible cement',
+            'Replacement & installation colorbond valley gutter & valley seal',
             'Broken tiles replacement & Cut tiles settled',
         ],
     },
@@ -28,7 +28,7 @@ export const beforeAndAfterData = [
         title: 'Colorbond and Metal Restoration',
         textColor: 'white',
         backgroundColor: 'rgb(22,22,22)',
-        listItems: ['Roof metal/Gutters high pressure cleaning ', 'Roof metal painting Resine Charcoal'],
+        listItems: ['Roof metal & gutters high pressure cleaning ', 'Roof metal painting Resine Charcoal'],
     },
 
     {
@@ -37,15 +37,15 @@ export const beforeAndAfterData = [
         textColor: 'black',
         backgroundColor: 'gray',
         listItems: [
-            'Roof tiles/Gutters high pressure cleaning',
-            'Ridge capping/collars and valleys repointing with flexible cement',
+            'Roof tiles & gutters high pressure cleaning',
+            'Ridge capping & collars and valleys repointing with flexible cement',
             'Broken tiles replacement',
-            'Roof tiles painting RGL adhesive Charcoal',
+            'Roof tiles painting & adhesive',
         ],
     },
     {
-        alt: 'Replacement/installation valley gutter & valley seal',
-        title: 'Replacement & Installation of Valley Gutter & Valley Seal',
+        alt: 'Replacement & installation valley gutter & valley seal',
+        title: 'Replacement & installation of valley gutter & valley seal',
         textColor: 'white',
         backgroundColor: 'black',
         listItems: [
@@ -60,9 +60,9 @@ export const beforeAndAfterData = [
         textColor: 'white',
         backgroundColor: 'rgb(22,22,22)',
         listItems: [
-            'Roof/Gutters high pressure cleaning',
-            'Ridge capping/collars/ gable repointing with flexible cement',
-            'Broken/chipped tiles replacement',
+            'Roof & Gutters high pressure cleaning',
+            'Ridge capping & collars &  gable repointing with flexible cement',
+            'Broken & chipped tiles replacement',
             'Roof tiles painting Resine Beige',
         ],
     },
@@ -72,7 +72,7 @@ export const beforeAndAfterData = [
         textColor: 'black',
         backgroundColor: 'gray',
         listItems: [
-            'Roof tiles/Gutters high pressure cleaning',
+            'Roof tiles & Gutters high pressure cleaning',
             'Ridge capping, collars and gable repointing  with flexible cement',
             'Scotia replacement',
         ],

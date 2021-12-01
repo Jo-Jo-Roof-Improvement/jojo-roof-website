@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Link } from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export const InstagramGalleryItem = ({
     src,
@@ -14,9 +14,10 @@ export const InstagramGalleryItem = ({
     className?: string;
     href?: string;
 }) => {
+
     return (
         <Link href={href}>
-            <div className={classNames('pl-5 pr-5', className)}>
+            <div className={classNames('rounded-t-md rounded-b-md pl-5 pr-5 hover:bg-red-300', className)}>
                 <img src={src} alt={alt} className="object-cover" />
             </div>
         </Link>

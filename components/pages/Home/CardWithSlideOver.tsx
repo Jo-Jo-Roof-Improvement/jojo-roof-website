@@ -33,9 +33,10 @@ export const CardWithSlideOver = ({ review }: CardWithSlideOverProps) => {
                 </TextBlock>
                 <div>
                     <AdornedText
+                    containerClassName="items-center"
                         StartAdornment={
-                            <div className="rounded-full h-6 mr-6 p-1 border-2">
-                                <img src="/brand-images/google-logo.png" alt="google reviews image" />
+                            <div className="rounded-full h-16 w-16 mr-10 p-1 z-50">
+                                <img src="/brand-images/googlemaps.jpg" className="rounded-full ring-2" alt="" />
                             </div>
                         }
                         text={format(new Date(review.time * 1000), 'dd / MM / yyyy')}
