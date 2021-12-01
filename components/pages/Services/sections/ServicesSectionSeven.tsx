@@ -28,7 +28,7 @@ export const ServicesSectionSeven = () => {
             textColor="white"
             header="WHAT ARE VALLEYS AND STORM SEAL?"
             body={body}
-            imageSrc="/images/image-3.jpg"
+            imageSrc="/services/seal.png"
             backgroundColor="rgb(22,22,22)"
         />
     );

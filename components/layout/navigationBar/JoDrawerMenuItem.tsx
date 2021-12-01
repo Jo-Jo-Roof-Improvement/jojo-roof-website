@@ -1,6 +1,6 @@
 import { TextBlock, TextBlockProps } from '@components/common/text/TextBlock';
 import Link, { LinkProps } from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 interface JoMenuItemProps extends TextBlockProps, LinkProps {
     text: string;
@@ -8,12 +8,18 @@ interface JoMenuItemProps extends TextBlockProps, LinkProps {
     href: string;
 }
 export const JoDrawerMenuItem = ({ text, bold, href, ...rest }: JoMenuItemProps) => {
+
+    useEffect(() => {
+
+    }, [])
+
+
     return (
         <TextBlock
             {...rest}
             fontFamily="Source Sans Pro"
             fontWeight={bold ? 500 : 200}
-            className="ml-3 mr-3 mt-3 pb-3 text-white"
+            className="ml-3 mr-3 mt-3 pb-3 text-white hover:textDecoration menu-item"
             style={{ borderBottom: `${bold ? '2px' : '0px'} solid white`, ...rest.style }}
         >
             <Link href={href}>

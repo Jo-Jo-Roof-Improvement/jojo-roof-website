@@ -6,23 +6,22 @@ import { TextBlock } from '@components/common/text/TextBlock';
 import { JoListItem } from '@components/common/lists/JoListItem';
 import { JoList } from '@components/common/lists/JoList';
 
-export const GalleryStripSection = ({
+export type BeforeAndAfterSectionProps = {
+    src: string;
+    alt: string;
+    title: string;
+    listItems: string[];
+    textColor: string;
+    backgroundColor: string;
+};
+export const BeforeAndAfterSection = ({
     src,
     title,
     listItems,
-    leadingText,
-    alt = 'gallery',
-    textColor = 'white',
-    backgroundColor = 'black',
-}: {
-    src: string;
-    alt: string;
-    leadingText: string;
-    listItems: string[];
-    title: string;
-    textColor?: string;
-    backgroundColor?: string;
-}) => {
+    alt,
+    textColor,
+    backgroundColor,
+}: BeforeAndAfterSectionProps) => {
     return (
         <WideStrip backgroundColor={backgroundColor} height="350px">
             <div className="flex flex-col md:flex-row justify-around items-center md:justify-center">
@@ -30,12 +29,12 @@ export const GalleryStripSection = ({
                     <img src={src} alt={alt} />
                 </div>
                 <div className="flex flex-col items-center p-5">
-                    <TitleTextBlock gutterBottom variant="h4" fontColor={textColor} title={title} />
-                    <TextBlock color={textColor}>{leadingText}</TextBlock>
+                    <TitleTextBlock className="pb-10" gutterBottom variant="h4" fontColor={textColor} title={title} />
+                    <TextBlock className="mb-5" gutterBottom variant="h5" color={textColor}>Restoration Details:</TextBlock>
                     <JoList>
                         {listItems.map((item, index) => (
                             <JoListItem color={textColor} key={index}>
-                                <TextBlock color={textColor}>{item}</TextBlock>
+                                <TextBlock color={textColor}>- {item}</TextBlock>
                             </JoListItem>
                         ))}
                     </JoList>

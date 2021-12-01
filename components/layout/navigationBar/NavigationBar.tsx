@@ -40,7 +40,7 @@ export const NavigationBar = ({ imgSrc, navBarRef }: NavigationBarProps) => {
             <div
                 ref={navBarRef}
                 style={{ borderBottom: '1px solid gray' }}
-                className={classNames('w-full z-50', isScrolled ? 'fixed top-0' : 'absolute')}
+                className={classNames('w-full z-50 bg-indigo-900', isScrolled ? 'fixed top-0' : 'absolute')}
             >
                 <NavBarContents
                     open={open}

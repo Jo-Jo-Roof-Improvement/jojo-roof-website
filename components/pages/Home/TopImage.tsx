@@ -11,6 +11,7 @@ export interface FullWidthImageProps {
     height?: string; // height: '100%';
     className?: string;
     width?: string; // width: '100%';
+    containerClassNames?: string;
 }
 export const FullWidthImage = ({
     src,
@@ -20,9 +21,10 @@ export const FullWidthImage = ({
     width = '100%',
     objectFit = 'cover',
     className = '',
+    containerClassNames = '',
 }: FullWidthImageProps) => {
     return (
-        <div className="bg-black w-full h-auto">
+        <div className={classNames('bg-black w-full h-auto', containerClassNames)}>
             <img
                 className={className}
                 src={src}

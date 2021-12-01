@@ -26,7 +26,7 @@ export const ServiceSectionThree = () => {
             textColor="white"
             header="Why should you clean your roof?"
             body={body}
-            imageSrc="/images/image-3.jpg"
+            imageSrc="/services/cleaning.jpg"
             backgroundColor="black"
         />
     );

@@ -13,11 +13,6 @@ export const ServicesSectionTwo = () => {
                 marginTop=""
                 className="md:mr-16 md:ml-16 md:pl-16 md:pr-16 pr-4 pl-4 pb-4"
             />
-            <FullWidthImage
-                src="images/image-3.jpg"
-                objectPosition="0 50%"
-
-            />
         </MediumStrip>
     );
 };

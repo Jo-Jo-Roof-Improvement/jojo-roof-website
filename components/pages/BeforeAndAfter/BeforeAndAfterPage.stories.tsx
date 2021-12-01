@@ -1,14 +1,14 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { GalleryPage } from './GalleryPage';
+import { BeforeAndAfterPage } from './BeforeAndAfterPage';
 
 export default {
     title: 'Main Pages/Gallery',
     argTypes: {},
-} as ComponentMeta<typeof GalleryPage>;
+} as ComponentMeta<typeof BeforeAndAfterPage>;
 
-const Template: ComponentStory<typeof GalleryPage> = (args) => <GalleryPage {...args} />;
+const Template: ComponentStory<typeof BeforeAndAfterPage> = (args) => <BeforeAndAfterPage {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {

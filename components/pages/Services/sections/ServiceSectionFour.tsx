@@ -29,7 +29,7 @@ export const ServiceSectionFour = () => {
             textColor="white"
             header="WHAT IS REPOINTING AND WHY IS IT NECESSARY TO DO IT ?"
             body={body}
-            imageSrc="/images/image-3.jpg"
+            imageSrc="/services/repointing.jpg"
             backgroundColor="rgb(22,22,22)"
         />
     );

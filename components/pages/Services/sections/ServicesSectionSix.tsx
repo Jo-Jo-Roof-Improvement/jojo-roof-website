@@ -27,7 +27,7 @@ export const ServicesSectionSix = () => {
             textColor="white"
             header="DOES PAINTING YOUR ROOF TILES IS NECESSARY?"
             body={body}
-            imageSrc="/images/image-3.jpg"
+            imageSrc="/services/painting.jpg"
             backgroundColor="black"
         />
     );

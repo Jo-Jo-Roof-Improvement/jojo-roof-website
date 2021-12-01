@@ -41,7 +41,7 @@ export const ServiceSectionFive = () => {
             textColor="black"
             header="WHEN DO WE HAVE TO REBEDDING THE RIDGES CAPPING ?"
             body={body}
-            imageSrc="/images/image-3.jpg"
+            imageSrc="/services/rebedding.jpg"
             backgroundColor="rgb(207,207,212)"
         />
     );

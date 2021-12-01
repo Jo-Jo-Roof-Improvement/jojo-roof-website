@@ -12,7 +12,7 @@ export interface LayoutProps {
 export const Layout = ({ children, pageTitle }: LayoutProps) => {
     const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
     const [navBarHeight, setNavBarHeight] = React.useState(0);
-
+    console.log(navBarHeight);
     useEffect(() => {
         if (ref && ref.current && ref.current.offsetHeight) {
             setNavBarHeight(ref.current.offsetHeight);
@@ -24,7 +24,8 @@ export const Layout = ({ children, pageTitle }: LayoutProps) => {
             <PageHead pageTitle={pageTitle} />
             <FreeQuoteToday />
             <NavigationBar imgSrc="/brand-images/logo.png" navBarRef={ref} />
-            <div style={{ height: navBarHeight }} className="w-full"></div>
+            {/* <div style={{ height: navBarHeight }} className="w-full "></div> */}
+            <div style={{ height: '105px' }} className="w-full h-auto"></div>
             {children}
             <Footer />
         </>
