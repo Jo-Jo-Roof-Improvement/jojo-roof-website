@@ -1,4 +1,3 @@
-import React from 'react';
 import { useRouter } from 'next/router';
 import { Routes } from './Routes';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -6,9 +5,10 @@ import { TextBlock } from '@components/common/text/TextBlock';
 import { JoMenu } from './JoMenu';
 import { JoMenuItem } from './JoMenuItem';
 import styles from './NavigationBar.module.css';
+import { useState } from 'react';
 
 export const CollapsableMenu = ({ fontSize }: { fontSize: string }) => {
-    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+    const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl(event.currentTarget);

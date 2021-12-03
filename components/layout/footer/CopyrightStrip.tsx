@@ -1,5 +1,5 @@
 import { StripBase } from '@components/common/strips/StripBase';
-import React from 'react';
+
 import { TextBlock } from '@components/common/text/TextBlock';
 
 export const CopyrightStrip = () => {

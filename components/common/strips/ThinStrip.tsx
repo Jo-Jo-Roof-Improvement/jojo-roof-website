@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { StripBase, StripBaseProps } from './StripBase';
 
 export interface ThinStripProps extends Omit<StripBaseProps, 'height'> {}

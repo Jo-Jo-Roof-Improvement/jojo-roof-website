@@ -1,6 +1,6 @@
 import { TextBlock, TextBlockProps } from '@components/common/text/TextBlock';
 import classNames from 'classnames';
-import React from 'react';
+
 
 export interface PhoneTextProps extends TextBlockProps {
     phoneNumber: string;

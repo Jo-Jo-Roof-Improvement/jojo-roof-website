@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { MediumStrip } from '@components/common/strips/MediumStrip';
 import { TextBlock } from '@components/common/text/TextBlock';
 

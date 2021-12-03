@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Layout } from '@components/layout/Layout';
 import { COMPANYNAME } from 'company';
-import React from 'react';
+
 import { ServiceSectionThree } from './sections/ServiceSectionThree';
 import { ServiceSectionFour } from './sections/ServiceSectionFour';
 import { ServiceSectionFive } from './sections/ServiceSectionFive';

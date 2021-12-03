@@ -6,7 +6,6 @@ import { NavBarContents } from './NavBarContents';
 
 interface NavigationBarProps {
     imgSrc: string;
-    navBarRef: React.MutableRefObject<HTMLDivElement>;
 }
 
 export const NavigationBar = ({ imgSrc }: NavigationBarProps) => {

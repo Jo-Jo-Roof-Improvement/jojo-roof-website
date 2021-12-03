@@ -1,5 +1,5 @@
 import { WideStrip } from '@components/common/strips/WideStrip';
-import React from 'react';
+
 import { TitleTextBlock } from '../TitleTextBlock';
 import { VideoWithTextBelow } from '../VideoWithTextBelow';
 

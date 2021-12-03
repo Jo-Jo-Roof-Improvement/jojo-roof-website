@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { TitleTextBlock } from '../../Home/TitleTextBlock';
 import { WideStrip } from '@components/common/strips/WideStrip';
 import { AdornedText } from '@components/common/text/AdornedText';

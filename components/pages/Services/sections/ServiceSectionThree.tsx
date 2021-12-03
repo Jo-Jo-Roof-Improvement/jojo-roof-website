@@ -1,5 +1,5 @@
 import { TextBlock } from '@components/common/text/TextBlock';
-import React from 'react';
+
 import { ServiceSection } from '../ServiceSection';
 
 export const ServiceSectionThree = () => {
@@ -22,7 +22,7 @@ export const ServiceSectionThree = () => {
     );
     return (
         <ServiceSection
-            title="ROOF CLEANING"
+            title="CLEANING"
             textColor="white"
             header="Why should you clean your roof?"
             body={body}

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { StripBase } from './StripBase';
 
 export interface MediumStripProps {

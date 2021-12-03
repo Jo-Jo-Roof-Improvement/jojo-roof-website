@@ -1,5 +1,5 @@
 import { WideStrip } from '@components/common/strips/WideStrip';
-import React from 'react';
+
 import { TextBlockSection } from '../TextBlockSection';
 import { TitleTextBlock } from '../TitleTextBlock';
 import { FullWidthImage } from '../TopImage';

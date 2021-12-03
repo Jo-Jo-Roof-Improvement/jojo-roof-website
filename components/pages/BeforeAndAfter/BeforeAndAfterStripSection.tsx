@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
+
 import { WideStrip } from '@components/common/strips/WideStrip';
 import { TitleTextBlock } from '../Home/TitleTextBlock';
 import { TextBlock } from '@components/common/text/TextBlock';

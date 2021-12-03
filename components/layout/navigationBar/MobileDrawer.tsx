@@ -1,4 +1,4 @@
-import React from 'react';
+
 import styles from './NavigationBar.module.css';
 import { Drawer } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';

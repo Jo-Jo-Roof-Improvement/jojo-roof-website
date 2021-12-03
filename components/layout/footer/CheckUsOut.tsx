@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { TextBlock } from '@components/common/text/TextBlock';
 
 export const CheckUsOut = () => {

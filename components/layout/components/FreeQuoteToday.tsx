@@ -1,5 +1,5 @@
 import { ThinStrip } from '@components/common/strips/ThinStrip';
-import React from 'react';
+
 import FlareIcon from '@mui/icons-material/Flare';
 import { AdornedText } from '@components/common/text/AdornedText';
 

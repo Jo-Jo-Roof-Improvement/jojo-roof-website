@@ -1,7 +1,7 @@
 import { JoList } from '@components/common/lists/JoList';
 import { JoListItem } from '@components/common/lists/JoListItem';
 import { TextBlock } from '@components/common/text/TextBlock';
-import React from 'react';
+
 import { ServiceSection } from '../ServiceSection';
 
 export const ServiceSectionFive = () => {
@@ -37,7 +37,7 @@ export const ServiceSectionFive = () => {
     );
     return (
         <ServiceSection
-            title="ROOF REBEDDING"
+            title="REBEDDING"
             textColor="black"
             header="WHEN DO WE HAVE TO REBEDDING THE RIDGES CAPPING ?"
             body={body}

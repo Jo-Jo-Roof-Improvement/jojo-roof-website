@@ -1,5 +1,5 @@
 import { TextBlock } from '@components/common/text/TextBlock';
-import React from 'react';
+
 import { JoListItem } from '@components/common/lists/JoListItem';
 import { Grid } from '@mui/material';
 

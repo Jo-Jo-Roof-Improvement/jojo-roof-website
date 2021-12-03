@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { MobileDrawerItems } from './MobileDrawerItems';
 import { MobileDrawer } from './MobileDrawer';
 import { NavBarLogoImage } from './NavBarLogoImage';

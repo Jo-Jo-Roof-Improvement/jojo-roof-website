@@ -1,5 +1,5 @@
 import { WideStrip } from '@components/common/strips/WideStrip';
-import React from 'react';
+
 import { InstagramGallery } from '../../AboutUs/InstagramGallery';
 import { TitleTextBlock } from '../../Home/TitleTextBlock';
 

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { GoogleReview } from 'types';
 import { CardWithSlideOver } from './CardWithSlideOver';
 

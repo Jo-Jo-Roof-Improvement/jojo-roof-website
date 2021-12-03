@@ -1,5 +1,5 @@
 import { TextBlock } from '@components/common/text/TextBlock';
-import React from 'react';
+
 import { ServiceSection } from '../ServiceSection';
 
 export const ServiceSectionFour = () => {
@@ -25,7 +25,7 @@ export const ServiceSectionFour = () => {
     );
     return (
         <ServiceSection
-            title="ROOF REPOINTING"
+            title="REPOINTING"
             textColor="white"
             header="WHAT IS REPOINTING AND WHY IS IT NECESSARY TO DO IT ?"
             body={body}

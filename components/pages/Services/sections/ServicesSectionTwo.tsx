@@ -1,7 +1,5 @@
 import { MediumStrip } from '@components/common/strips/MediumStrip';
 import { TitleTextBlock } from '@components/pages/Home/TitleTextBlock';
-import { FullWidthImage } from '@components/pages/Home/TopImage';
-import React from 'react';
 
 export const ServicesSectionTwo = () => {
     return (

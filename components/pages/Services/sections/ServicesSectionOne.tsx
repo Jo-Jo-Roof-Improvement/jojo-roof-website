@@ -1,13 +1,13 @@
 import { MediumStrip } from '@components/common/strips/MediumStrip';
+import { WideStrip } from '@components/common/strips/WideStrip';
 import { TitleTextBlock } from '@components/pages/Home/TitleTextBlock';
-import React from 'react';
 
 export const ServicesSectionOne = () => {
     return (
-        <MediumStrip align="center" backgroundColor="white" height="150px">
+        <WideStrip align="center" backgroundColor="white" >
             <div className="h-full flex flex-col items-center justify-center">
-                <TitleTextBlock fontColor="black" title="Our Services" marginTop="" />
+                <TitleTextBlock fontColor="black" title="Our Roof Improvement Services" marginTop="" />
             </div>
-        </MediumStrip>
+        </WideStrip>
     );
 };

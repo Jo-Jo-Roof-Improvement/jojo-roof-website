@@ -1,7 +1,7 @@
 import { WideStrip } from '@components/common/strips/WideStrip';
 import { Layout } from '@components/layout/Layout';
 import { COMPANYNAME } from 'company';
-import React from 'react';
+
 import { ContactFormSection } from './ContactFormSection';
 import { SectionOne } from './sections/SectionOne';
 import { SectionThree } from './sections/SectionThree';

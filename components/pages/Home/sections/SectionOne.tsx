@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { FullWidthImage } from '../TopImage';
 
 export const SectionOne = () => {

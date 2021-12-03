@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { InstagramGalleryItem } from './InstagramGalleryItem';
 
 export const InstagramGallery = () => {

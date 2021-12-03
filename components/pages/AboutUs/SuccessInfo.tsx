@@ -1,5 +1,5 @@
 import { TextBlock } from '@components/common/text/TextBlock';
-import React from 'react';
+
 import { TitleTextBlock } from '../Home/TitleTextBlock';
 
 

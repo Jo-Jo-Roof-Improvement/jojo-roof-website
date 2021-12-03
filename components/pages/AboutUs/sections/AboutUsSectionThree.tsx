@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { GoogleReview } from 'types';
 import { ReviewGallery } from '@components/common/reviews/ReviewGallery';
 import { WideStrip } from '@components/common/strips/WideStrip';

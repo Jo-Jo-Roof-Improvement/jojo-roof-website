@@ -1,5 +1,5 @@
 import { TextBlock } from '@components/common/text/TextBlock';
-import React from 'react';
+
 import { TitleTextBlock } from '../Home/TitleTextBlock';
 import { JoList } from '@components/common/lists/JoList';
 import { OperatingHoursItem } from './OperatingHoursItem';

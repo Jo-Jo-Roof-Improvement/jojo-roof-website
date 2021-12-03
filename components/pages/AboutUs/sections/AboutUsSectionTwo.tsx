@@ -1,6 +1,6 @@
 import { WideStrip } from '@components/common/strips/WideStrip';
 import { Divider } from '@mui/material';
-import React from 'react';
+
 import { SuccessInfo } from '../SuccessInfo';
 
 export const AboutUsSectionTwo = () => {

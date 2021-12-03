@@ -1,6 +1,6 @@
 import { TextBlock } from '@components/common/text/TextBlock';
 import { TypographyVariant } from '@mui/material';
-import React from 'react';
+
 import { TitleTextBlock } from './TitleTextBlock';
 
 

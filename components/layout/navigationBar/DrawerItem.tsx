@@ -1,5 +1,5 @@
 import { TextBlock } from '@components/common/text/TextBlock';
-import React from 'react';
+
 import { Divider } from '@mui/material';
 import Link from 'next/link';
 

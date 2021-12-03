@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavBarLogoImageMediumLarge } from './NavBarLogoImage';
 import { PhoneText } from './PhoneText';
 import { MenuLineItems } from './MenuLineItems';
