@@ -24,7 +24,7 @@ export const ServiceSection = ({
     variant = 'h5',
 }: ServiceSectionProps) => {
     return (
-        <WideStrip backgroundColor={backgroundColor} className="flex flex-col pb-10 pt-10">
+        <WideStrip maxHeight="" backgroundColor={backgroundColor} className="flex flex-col pb-10 pt-10">
             <TitleTextBlock
                 className="text-left"
                 fontColor={textColor}

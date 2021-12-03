@@ -7,6 +7,7 @@ export const FreeQuoteToday = () => {
     return (
         <ThinStrip backgroundColor="#CFCFD4" align="center">
             <AdornedText
+                fontVariant="secondary"
                 StartAdornment={<FlareIcon />}
                 EndAdornment={<FlareIcon />}
                 padAdornment={1}

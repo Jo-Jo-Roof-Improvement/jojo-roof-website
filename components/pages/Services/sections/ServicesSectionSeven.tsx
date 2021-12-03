@@ -24,9 +24,9 @@ export const ServicesSectionSeven = () => {
     );
     return (
         <ServiceSection
-            title="Replace Valley and Install Storm seal"
+            title="Replace valley and storm seal"
             textColor="white"
-            header="WHAT ARE VALLEYS AND STORM SEAL?"
+            header="What are valleys and storm seals?"
             body={body}
             imageSrc="/services/seal.png"
             backgroundColor="rgb(22,22,22)"

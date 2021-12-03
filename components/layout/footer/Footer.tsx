@@ -9,7 +9,7 @@ import { PaulsClaim } from './PaulsClaim';
 export const Footer = () => {
     return (
         <>
-            <StripBase className="flex flex-col  pt-5" backgroundColor="rgb(207,207,212)" height="150px" maxHeight="">
+            <StripBase className="flex flex-col pt-5" backgroundColor="rgb(207,207,212)" height="150px" maxHeight="">
                 <SocialMediaSection>
                     <CheckUsOut />
                     <SocialMediaIcons />

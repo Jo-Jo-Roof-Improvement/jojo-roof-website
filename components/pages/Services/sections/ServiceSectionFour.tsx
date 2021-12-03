@@ -27,7 +27,7 @@ export const ServiceSectionFour = () => {
         <ServiceSection
             title="REPOINTING"
             textColor="white"
-            header="WHAT IS REPOINTING AND WHY IS IT NECESSARY TO DO IT ?"
+            header="What is repointing? And why should I do it?"
             body={body}
             imageSrc="/services/repointing.jpg"
             backgroundColor="rgb(22,22,22)"

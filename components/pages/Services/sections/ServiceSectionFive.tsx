@@ -39,7 +39,7 @@ export const ServiceSectionFive = () => {
         <ServiceSection
             title="REBEDDING"
             textColor="black"
-            header="WHEN DO WE HAVE TO REBEDDING THE RIDGES CAPPING ?"
+            header="What is rebedding and ridge capping?"
             body={body}
             imageSrc="/services/rebedding.jpg"
             backgroundColor="rgb(207,207,212)"

@@ -22,6 +22,7 @@ export const AdornedText = ({
     padAdornment,
     textClassName,
     containerClassName,
+
 }: AdornedText) => {
     const adornmentStyle = {
         verticalAlign: 'middle',
