@@ -8,7 +8,7 @@ import { Link } from '@mui/material';
 
 export const AboutUsSectionFour = () => {
     return (
-        <WideStrip className="flex flex-col">
+        <WideStrip className="flex flex-col" maxHeight="">
             <TitleTextBlock title="Our Clients" className="pb-10" />
             <div className="w-2/3 mb-5">
                 <InstagramGallery />

@@ -11,7 +11,7 @@ export const WideStrip = ({
     backgroundColor = 'rgba(22, 22, 22, 1.0)',
     height = '500px',
     className = '',
-    maxHeight = '1000px',
+    maxHeight = '',
 }: WideStripProps) => {
     return (
         <StripBase

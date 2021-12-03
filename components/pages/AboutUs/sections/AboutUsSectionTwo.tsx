@@ -7,10 +7,9 @@ export const AboutUsSectionTwo = () => {
     return (
         <WideStrip
             maxHeight=""
-            // align="center"
             height="300px"
             backgroundColor="rgb(207,207,212)"
-            className="flex flex-col items-center w-full lg:flex-row lg:justify-center lg:justify-evenly"
+            className="flex flex-col items-center w-full lg:flex-row lg:justify-evenly"
         >
             <LargeScreenSizeLayout />
             <SmallScreenSizeLayout />
