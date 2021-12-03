@@ -11,9 +11,11 @@ export interface VideoWithTextBelowProps {
 
 export const VideoWithTextBelow = ({ src, videoTitle, text, buttonText }: VideoWithTextBelowProps) => {
     return (
-        <div className={classNames('flex flex-col items-center justify-evenly w-full pr-4 pl-4')}>
-            <VimeoVideo src={src} title={videoTitle} frameClassName="md:mb-5" />
-            <TextBlock align="center" color="white" variant="h6" paragraph>
+        <div className={classNames('flex flex-col justify-start w-full pr-4 pl-4 mb-5')}>
+            <div className="mb-4 lg:mb-5 w-full h-72 lg:h-96">
+                <VimeoVideo src={src} title={videoTitle} frameClassName="" />
+            </div>
+            <TextBlock align="center" color="white" variant="h5" paragraph>
                 {text}
             </TextBlock>
             <TextBlock align="center" color="white" paragraph>

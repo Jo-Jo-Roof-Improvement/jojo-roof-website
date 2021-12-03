@@ -12,7 +12,6 @@ export interface LayoutProps {
 export const Layout = ({ children, pageTitle }: LayoutProps) => {
     const ref = useRef() as React.MutableRefObject<HTMLDivElement>;
     const [navBarHeight, setNavBarHeight] = React.useState(0);
-    console.log(navBarHeight);
     useEffect(() => {
         if (ref && ref.current && ref.current.offsetHeight) {
             setNavBarHeight(ref.current.offsetHeight);

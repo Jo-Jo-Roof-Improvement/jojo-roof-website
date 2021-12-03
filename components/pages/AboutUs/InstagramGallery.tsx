@@ -16,7 +16,7 @@ export const InstagramGallery = () => {
                 <InstagramGalleryItem href={links[2]} src={`/instagram-gallery/insta-3.png`} className="pb-10 " />
             </div>
             <div className="md:flex md:flex-col hidden lg:hidden">
-                <div className="flex flex-row">
+                <div className="flex flex-row mb-10">
                     {[1, 2].map((i) => (
                         <InstagramGalleryItem href={links[i - 1]} key={i} src={`/instagram-gallery/insta-${i}.png`} />
                     ))}

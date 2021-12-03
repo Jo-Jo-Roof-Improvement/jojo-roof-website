@@ -1,3 +1,11 @@
-export const JoListItem = ({ children, color = "black" }: { color?: string; children: React.ReactNode }) => {
-    return <li style={{ color,   listStyleType: '- ' }}>{children}</li>;
+import React from 'react';
+
+export interface JoListItemProps extends React.HTMLProps<HTMLLIElement> {}
+
+export const JoListItem = ({ children, color = 'black', ...rest }: JoListItemProps) => {
+    return (
+        <li style={{ color }} {...rest}>
+            {children}
+        </li>
+    );
 };

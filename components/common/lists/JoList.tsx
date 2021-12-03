@@ -1,3 +1,13 @@
-export const JoList = ({ children }: { children: React.ReactNode }) => {
-    return <ul style={{ paddingLeft: '1.5rem', paddingBottom: '1.5rem' }}>{children}</ul>;
+export interface JoListProps extends React.HTMLProps<HTMLUListElement> {
+    children?: React.ReactNode;
+    paddingLeft?: string;
+    paddingBottom?: string;
+}
+
+export const JoList = ({ children, paddingLeft = '1.5rem', paddingBottom = '1.5rem', ...rest }: JoListProps) => {
+    return (
+        <ul style={{ paddingLeft, paddingBottom }} {...rest}>
+            {children}
+        </ul>
+    );
 };
