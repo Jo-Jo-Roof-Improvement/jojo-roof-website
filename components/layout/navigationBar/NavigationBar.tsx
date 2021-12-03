@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
-import styles from './NavigationBar.module.css';
 
 import { NavBarContents } from './NavBarContents';
 
@@ -30,11 +29,6 @@ export const NavigationBar = ({ imgSrc, navBarRef }: NavigationBarProps) => {
         window.addEventListener('scroll', handleScroll);
     }, []);
 
-    const [menuOpen, setMenuOpen] = useState(false);
-    const toggleInlineMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
-
     return (
         <>
             <div
@@ -42,12 +36,7 @@ export const NavigationBar = ({ imgSrc, navBarRef }: NavigationBarProps) => {
                 style={{ borderBottom: '1px solid gray' }}
                 className={classNames('w-full z-50 bg-indigo-900', isScrolled ? 'fixed top-0' : 'absolute')}
             >
-                <NavBarContents
-                    open={open}
-                    imgSrc={imgSrc}
-                    toggleDrawer={toggleDrawer}
-                    toggleInlineMenu={toggleInlineMenu}
-                />
+                <NavBarContents open={open} imgSrc={imgSrc} toggleDrawer={toggleDrawer} />
             </div>
         </>
     );

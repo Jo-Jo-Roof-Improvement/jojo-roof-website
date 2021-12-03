@@ -11,6 +11,6 @@ export async function getStaticProps() {
     return { props: { galleryPhotoList, reviews } };
 }
 
-export default function Home({ galleryPhotoList, reviews }: HomePageProps) {
+export default function Home({ galleryPhotoList = [], reviews = [] }: HomePageProps) {
     return <HomePage galleryPhotoList={galleryPhotoList} reviews={reviews} />;
 }

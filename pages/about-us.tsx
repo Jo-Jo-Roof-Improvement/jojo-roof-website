@@ -8,6 +8,6 @@ export async function getStaticProps() {
     return { props: { reviews } };
 }
 
-export default function AboutUs({ reviews }: { reviews: GoogleReview[] }) {
+export default function AboutUs({ reviews = [] }: { reviews: GoogleReview[] }) {
     return <AboutUsPage reviews={reviews} />;
 }

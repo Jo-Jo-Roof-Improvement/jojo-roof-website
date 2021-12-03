@@ -4,11 +4,7 @@ import { Routes } from './Routes';
 import { JoDrawerMenuItem } from './JoDrawerMenuItem';
 import { CollapsableMenu } from './CollapsableMenu';
 
-export interface MenuLineItemsProps {
-    toggleInlineMenu: () => void;
-}
-
-export const MenuLineItems = ({ toggleInlineMenu }: MenuLineItemsProps) => {
+export const MenuLineItems = () => {
     const router = useRouter();
     const fontsize = '16pt';
     return (
@@ -22,7 +18,7 @@ export const MenuLineItems = ({ toggleInlineMenu }: MenuLineItemsProps) => {
                 />
                 <JoDrawerMenuItem
                     fontSize={fontsize}
-                    text="About us"
+                    text="About Us"
                     href={Routes.AboutUs}
                     bold={router.pathname === Routes.AboutUs}
                 />

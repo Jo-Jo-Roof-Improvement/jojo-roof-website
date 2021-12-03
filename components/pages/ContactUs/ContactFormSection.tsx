@@ -1,5 +1,5 @@
 import { JoButton } from '@components/common/buttons/JoButton';
-import { FormControl, FormGroup, useFormControl } from '@mui/material';
+import { useFormControl } from '@mui/material';
 import axios from 'axios';
 import React, { useState } from 'react';
 import { TitleTextBlock } from '../Home/TitleTextBlock';
@@ -27,7 +27,7 @@ export const ContactFormSection = () => {
         message: '',
     });
 
-    const emailServerUrl = '';
+    const emailServerUrl = 'https://d6nkn6t3bk.execute-api.us-east-1.amazonaws.com/prod';
     // const emailServerUrl = 'http://localhost:5603/dev/';
     const value = useFormControl();
 
@@ -65,7 +65,7 @@ export const ContactFormSection = () => {
 
     return (
         <div className="flex flex-col w-full">
-            <TitleTextBlock title="Feel free to reach out!" containerClassName="mb-6" variant="h4"/>
+            <TitleTextBlock title="Feel free to reach out!" containerClassName="mb-6" variant="h4" />
             <form onSubmit={onSubmit}>
                 <FormItem type="text" error={errors.name} value={formData.name} onChange={setName} label="Name" />
                 <FormItem
