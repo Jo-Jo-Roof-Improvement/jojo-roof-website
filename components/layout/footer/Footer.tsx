@@ -9,7 +9,7 @@ import { TextBlock } from '@components/common/text/TextBlock';
 export const Footer = () => {
     return (
         <>
-            <StripBase className="flex flex-col " backgroundColor="rgb(207,207,212)" height="150px">
+            <StripBase className="flex flex-col  pt-5" backgroundColor="rgb(207,207,212)" height="150px" maxHeight="">
                 <SocialMediaSection>
                     <CheckUsOut />
                     <SocialMediaIcons />

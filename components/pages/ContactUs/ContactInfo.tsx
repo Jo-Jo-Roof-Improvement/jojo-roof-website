@@ -17,15 +17,16 @@ export const ContactInfo = () => {
 
     return (
         <>
-            <TitleTextBlock className="pb-5" title="Speak to us directly!" variant="h4" />
+            <TitleTextBlock className="mt-10 pb-5" title="Speak to us directly!" variant="h4" />
             <TextBlock className="text-gray-400" align="center" variant="h6">
-                No matter why you hire us, we are committed to making sure we give 100 percent to each job we take on.
-                Contact us to set up a no-obligation consultation today!
+                We are committed to making sure you feel both comfortable and confident when deciding to hire our services. Trust is our priority.
+                Contact us to set up a free, no-obligation consultation, and we will be happy to answer any questions you may have.
             </TextBlock>
             <TitleTextBlock title="Jojo Roof Improvement" variant="h4" className="mb-10" />
             <TextBlock className="text-gray-400" align="center">
-                Melbourne, Victoria, Australia 0433881760
+                Melbourne, Victoria, Australia
             </TextBlock>
+            <TextBlock variant="h4" color="white" align="center" className="mt-10">+61 04 3388 1760</TextBlock>
             <div>
                 <TitleTextBlock align="center" title="Business Hours" variant="h4" gutterBottom />
                 <JoList className="text-white text-center" paddingBottom="" paddingLeft="">

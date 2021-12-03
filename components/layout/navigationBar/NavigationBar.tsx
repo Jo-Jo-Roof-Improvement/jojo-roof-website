@@ -9,7 +9,7 @@ interface NavigationBarProps {
     navBarRef: React.MutableRefObject<HTMLDivElement>;
 }
 
-export const NavigationBar = ({ imgSrc, navBarRef }: NavigationBarProps) => {
+export const NavigationBar = ({ imgSrc }: NavigationBarProps) => {
     const [open, setOpen] = useState(false);
 
     const toggleDrawer = (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -32,7 +32,6 @@ export const NavigationBar = ({ imgSrc, navBarRef }: NavigationBarProps) => {
     return (
         <>
             <div
-                ref={navBarRef}
                 style={{ borderBottom: '1px solid gray' }}
                 className={classNames('w-full z-50 bg-indigo-900', isScrolled ? 'fixed top-0' : 'absolute')}
             >

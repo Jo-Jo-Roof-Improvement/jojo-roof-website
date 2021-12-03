@@ -31,8 +31,8 @@ export const HomePage = ({ galleryPhotoList, reviews }: HomePageProps) => {
 export const Header = () => {
     return (
         <WideStrip height="200px" className="flex flex-col">
-            <TitleTextBlock marginTop="" variant="h4" title="Welcome to" />
-            <TitleTextBlock marginTop="" variant="h2" title="Jo Jo's Roof Improvement" />
+            <TitleTextBlock marginTop="" variant="h5" title="See the difference" />
+            <TitleTextBlock className="font-semibold" marginTop="" variant="h2" title="Jo Jo's Roof Improvement" />
         </WideStrip>
     );
 };

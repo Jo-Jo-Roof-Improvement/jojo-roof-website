@@ -22,7 +22,7 @@ export const SectionThree = () => {
                         marginTop=""
                         variant="h4"
                         fontColor="black"
-                        title="WE DELIVER TOP QUALITY WORK AT UNBEATABLE PRICES !!"
+                        title="WE DELIVER TOP QUALITY WORK AT UNBEATABLE PRICES"
                     />
                 </div>
                 <TextBlockSection

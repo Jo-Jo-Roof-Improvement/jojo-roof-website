@@ -24,12 +24,12 @@ export const CollapsableMenu = ({ fontSize }: { fontSize: string }) => {
                 <TextBlock
                     fontFamily="Source Sans Pro"
                     fontSize={fontSize}
-                    className="text-white pl-5"
+                    className="text-white ml-3"
                     onClick={handleClick}
                 >
-                    Plus
+                    More
                 </TextBlock>
-                <KeyboardArrowDownIcon className="text-white" />
+                <KeyboardArrowDownIcon className="text-white mt-1 ml-1" />
             </div>
             <JoMenu
                 className="text-white"
@@ -42,8 +42,8 @@ export const CollapsableMenu = ({ fontSize }: { fontSize: string }) => {
                     horizontal: 'left',
                 }}
                 transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'center',
+                    vertical: 'center',
+                    horizontal: 'left',
                 }}
             >
                 <JoMenuItem

@@ -3,7 +3,6 @@ import { WideStrip } from '@components/common/strips/WideStrip';
 import { TitleTextBlock } from '../TitleTextBlock';
 import { GoogleReview } from 'types';
 import { Link, Rating } from '@mui/material';
-import { SCREEN_LARGE, SCREEN_MEDIUM, SCREEN_SMALL } from 'styles/theme';
 import { TextBlock } from '@components/common/text/TextBlock';
 import { ReviewGallery } from '@components/common/reviews/ReviewGallery';
 import SwiperCore, { Pagination, Navigation, Lazy, Controller } from 'swiper';
