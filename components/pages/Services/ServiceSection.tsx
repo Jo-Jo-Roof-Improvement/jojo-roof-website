@@ -33,12 +33,18 @@ export const ServiceSection = ({
                 containerClassName="pt-10 md:pt-0 md:pb-5"
             />
             <div className="flex flex-col md:flex-row pl-8 pr-8 pt-10 items-center">
-                <FullWidthImage containerClassNames="md:hidden" src={imageSrc} height="250px" objectPosition="50%" objectFit="cover" />
+                <FullWidthImage
+                    containerClassNames="md:hidden"
+                    src={imageSrc}
+                    height="250px"
+                    objectPosition="50%"
+                    objectFit="cover"
+                />
                 <div className="pl-8 pr-8 mt-10">
                     <TitleTextBlock
                         variant={variant}
-                        align="right"
-                        className="text-left pb-3"
+                        align="left"
+                        className="pb-3"
                         fontColor={textColor}
                         title={header}
                         marginTop=""

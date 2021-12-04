@@ -12,11 +12,11 @@ export const NavBarBoxItems = ({ phoneNumber, imgSrc, toggleDrawer }: NavBarBoxI
     const SmallBlock = () => {
         return (
             <div className="flex flex-row flex-grow justify-between mb-4 md:hidden">
-                <div className="w-1/3">
+                <div className="w-1/4">
                     <MenuIcon onClick={toggleDrawer} className="text-white" />
                 </div>
                 <PhoneText phoneNumber={phoneNumber} className="text-white text-center" />
-                <div className="invisible w-1/3">Empty</div>
+                <div className="invisible w-1/4">Empty</div>
             </div>
         );
     };
@@ -31,7 +31,7 @@ export const NavBarBoxItems = ({ phoneNumber, imgSrc, toggleDrawer }: NavBarBoxI
                     containerClassName="w-1/4"
                 />
                 <MenuLineItems />
-                <PhoneText className="text-white w-1/4 justify-end pr-6 pl-2" phoneNumber={phoneNumber} />
+                <PhoneText className="text-white w-1/4 justify-end pr-6 pl-2 md:font-thin md:text-md" phoneNumber={phoneNumber} />
             </div>
         );
     };

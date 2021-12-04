@@ -4,7 +4,6 @@ const emailServerUrl =
     'https://puxok6fztb.execute-api.us-east-1.amazonaws.com/prod/Jo-Jo-email-service-prod-Jo-Jo-Email-Function';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    console.log(req);
     if (req.method === 'POST') {
         const data = JSON.parse(req.body);
 

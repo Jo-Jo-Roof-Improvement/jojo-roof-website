@@ -25,7 +25,6 @@ export const ServicesSectionSix = () => {
         <ServiceSection
             title="PAINTING"
             textColor="white"
-            variant="h4"
             header="Is painting your roof tiles necessary?"
             body={body}
             imageSrc="/services/painting.jpg"

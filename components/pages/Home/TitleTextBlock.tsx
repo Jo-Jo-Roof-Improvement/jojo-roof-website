@@ -11,6 +11,7 @@ export const TitleTextBlock = ({
     containerClassName = '',
     gutterBottom = false,
     align = 'center',
+    style = {},
 }: TypographyProps & {
     title: string;
     fontColor?: string;
@@ -18,10 +19,12 @@ export const TitleTextBlock = ({
     className?: string;
     marginTop?: string; // like mt-16
     containerClassName?: string;
+    style?: React.CSSProperties;
 }) => {
     return (
         <div className={classNames(marginTop, containerClassName)}>
             <TextBlock
+                style={style}
                 gutterBottom={gutterBottom}
                 color={fontColor}
                 align={align}

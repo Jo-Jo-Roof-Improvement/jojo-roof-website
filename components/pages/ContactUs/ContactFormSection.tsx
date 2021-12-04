@@ -1,6 +1,6 @@
 import { JoButton } from '@components/common/buttons/JoButton';
 import { TextBlock } from '@components/common/text/TextBlock';
-import { Slide, SlideProps, Snackbar, useFormControl } from '@mui/material';
+import { CircularProgress, Slide, SlideProps, Snackbar } from '@mui/material';
 import React, { useState } from 'react';
 import { TitleTextBlock } from '../Home/TitleTextBlock';
 import { FormItem } from './FormItem';
@@ -43,15 +43,17 @@ export const ContactFormSection = () => {
         message: false,
     });
 
+    const [spinning, setSpinning] = useState(false);
+
     const onSubmit = async (e: any) => {
         e.preventDefault();
-
+        setSpinning(true);
         const response = await fetch('/api/submit-contact', {
             method: 'POST',
             body: JSON.stringify(formData),
         });
         const data = await response.json();
-
+        setSpinning(false);
         if (!data.success) {
             setSnackErrorOpen(true);
         } else {
@@ -62,7 +64,7 @@ export const ContactFormSection = () => {
         return;
     };
 
-    const [snackOpen, setSnackOpen] = useState(true);
+    const [snackOpen, setSnackOpen] = useState(false);
     const [snackErrorOpen, setSnackErrorOpen] = useState(false);
 
     return (
@@ -88,12 +90,21 @@ export const ContactFormSection = () => {
                     />
                     <FormMessage error={errors.message} value={formData.message} onChange={setMessage} />
                     <JoButton
+                        endIcon={spinning ? <CircularProgress size={24} /> : null}
                         type="submit"
                         fullWidth
-                        className="bg-gray-300 mt-5 text-black text-xl hover:shadow-lg hover:bg-gray-600 hover:text-white"
-                        style={{ height: '50px' }}
+                        className="hover:shadow-lg hover:bg-gray-600 hover:text-white"
+                        style={{
+                            height: '50px',
+                            backgroundColor: 'gray',
+                            marginTop: '1.25rem',
+                            color: "black",
+                            fontSize: "1.25rem",
+                            lineHeight: "1.75rem",
+
+                        }}
                     >
-                        Submit
+                        {!spinning ? 'Submit' : 'Submitting...'}
                     </JoButton>
                 </form>
             </div>

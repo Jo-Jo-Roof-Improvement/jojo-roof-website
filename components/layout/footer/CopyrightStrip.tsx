@@ -9,7 +9,7 @@ export const CopyrightStrip = () => {
                 Copyright © 2021 Jojo Roof Improvement
             </TextBlock>
             <TextBlock align="center" fontFamily="Source Sans Pro" variant="h6" color="black" className="pb-10">
-                All Rights Reserved.
+                All Rights Reserved
             </TextBlock>
         </StripBase>
     );

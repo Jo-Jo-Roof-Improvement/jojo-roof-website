@@ -4,7 +4,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-    import type { AppProps } from 'next/app';
+import type { AppProps } from 'next/app';
 import { ThemeProvider } from '@mui/system';
 import { theme } from 'styles/theme';
 

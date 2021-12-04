@@ -1,0 +1,35 @@
+.inputprops {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: black;
+    font-size: 16pt;
+    padding-top: 0.5rem;
+    border-radius: none;
+    color: white;
+}
+
+.inputprops:hover {
+    background-color: black;
+}
+
+.inputlabelprops {
+    font-family: 'Source Sans Pro', sans-serif;
+    --tw-text-opacity: 1;
+    color: rgba(156, 163, 175, var(--tw-text-opacity));
+    background: none;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.jotextfield {
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-bottom: 0.5rem;
+}
+
+.messageInputProps {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: black;
+    font-size: 16pt;
+    padding-top: 2rem;
+    border-radius: none;
+    color: white;
+}

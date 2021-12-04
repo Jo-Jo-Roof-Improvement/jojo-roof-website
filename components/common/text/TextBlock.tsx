@@ -1,6 +1,4 @@
 import { Typography, TypographyProps } from '@mui/material';
-import classNames from 'classnames';
-
 
 export interface TextBlockProps extends TypographyProps {
     children?: React.ReactNode;
@@ -8,9 +6,13 @@ export interface TextBlockProps extends TypographyProps {
     fontVariant?: 'primary' | 'secondary';
 }
 
-export const TextBlock = ({ children, className, fontVariant = "secondary", ...rest }: TextBlockProps) => {
+export const TextBlock = ({ children, className, fontVariant = 'secondary', ...rest }: TextBlockProps) => {
     return (
-        <Typography {...rest} className={classNames(className)} fontFamily={fontVariant === "primary" ? "Fjalla One" : "Source Sans Pro"}>
+        <Typography
+            {...rest}
+            className={className}
+            fontFamily={fontVariant === 'primary' ? 'Fjalla One' : 'Source Sans Pro'}
+        >
             {children}
         </Typography>
     );

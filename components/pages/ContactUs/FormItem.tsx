@@ -1,6 +1,6 @@
 import { JoTextField } from '@components/common/input/JoTextField';
 import { InputBaseComponentProps, InputLabelProps, TextFieldProps } from '@mui/material';
-
+import styles from './ContactUsPage.module.css';
 
 export const FormItem = ({
     value,
@@ -29,11 +29,11 @@ export const FormItem = ({
             error={error}
             required={required}
             multiline={rows > 1}
-            style={{ fontFamily: 'Source Sans Pro' }}
+            style={{ fontFamily: 'Source Sans Pro', paddingBottom: "0.5rem" }}
             rows={rows}
             variant="filled"
             fullWidth
-            className="pb-2"
+            className={styles.jotextfield}
             label={label}
             onChange={(e) => {
                 e.preventDefault();
@@ -43,15 +43,28 @@ export const FormItem = ({
             size="medium"
             InputLabelProps={{
                 shrink: true,
-                className: 'text-gray-400 bg-none text-2xl',
+                // className: styles.inputlabelprops,
                 style: {
-                    fontSize: '16pt',
+                    fontSize: '1.5rem',
+                    lineHeight: '2rem',
                     textAlign: 'left',
+                    backgroundColor: 'black',
+                    fontFamily: 'Source Sans Pro',
+                    strokeOpacity: 1,
+                    color: 'rgba(156, 163, 175, var(--tw-text-opacity))',
+                    background: 'none',
                 },
                 ...InputLabelProps,
             }}
             InputProps={{
-                className: 'bg-black hover:bg-black rounded-none text-white text-xl pt-2',
+                style: {
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: '16pt',
+                    paddingTop: '0.5rem',
+                    borderRadius: 'none',
+                    color: 'white',
+                    backgroundColor: 'black',
+                },
             }}
             inputProps={{
                 style: { fontFamily: 'Source Sans Pro' },
