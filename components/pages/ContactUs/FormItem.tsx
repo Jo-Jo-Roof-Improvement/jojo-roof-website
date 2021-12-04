@@ -51,7 +51,7 @@ export const FormItem = ({
                     backgroundColor: 'black',
                     fontFamily: 'Source Sans Pro',
                     strokeOpacity: 1,
-                    color: 'rgba(156, 163, 175, var(--tw-text-opacity))',
+                    color: 'white',
                     background: 'none',
                 },
                 ...InputLabelProps,

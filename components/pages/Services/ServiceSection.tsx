@@ -40,7 +40,7 @@ export const ServiceSection = ({
                     objectPosition="50%"
                     objectFit="cover"
                 />
-                <div className="pl-8 pr-8 mt-10">
+                <div className="pl-8 pr-8 mt-10 md:w-1/2">
                     <TitleTextBlock
                         variant={variant}
                         align="left"
@@ -53,7 +53,15 @@ export const ServiceSection = ({
                         {body}
                     </TextBlock>
                 </div>
-                <FullWidthImage src={imageSrc} height="250px" objectPosition="50%" objectFit="cover" />
+                <div className="md:w-1/2">
+                    <FullWidthImage
+                        containerClassNames="hidden md:flex"
+                        src={imageSrc}
+                        height="350px"
+                        objectPosition="50%"
+                        objectFit="cover"
+                    />
+                </div>
             </div>
         </WideStrip>
     );

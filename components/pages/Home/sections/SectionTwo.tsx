@@ -7,7 +7,7 @@ export const SectionTwo = () => {
     return (
         <WideStrip align="center" maxHeight="">
             <div className="flex flex-col items-center w-full mb-5">
-                <TitleTextBlock title="Your roof is your home's main defense" className="pl-2 pr-2 md:mb-0 lg:mb-6"  />
+                <TitleTextBlock title="Your roof is your home's main defense" className="pl-2 pr-2 pb-6"  />
                 <div className="flex flex-col md:flex-row md:w-full">
                     <VideoWithTextBelow
                         src="//player.vimeo.com/video/589829430?autoplay=0&amp;title=0&amp;portrait=0&amp;byline=0&amp;badge=0"
