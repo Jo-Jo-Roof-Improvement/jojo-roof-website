@@ -1,6 +1,5 @@
 import { TextBlock, TextBlockProps } from '@components/common/text/TextBlock';
 import Link, { LinkProps } from 'next/link';
-import React from 'react';
 
 interface JoMenuItemProps extends TextBlockProps, LinkProps {
     text: string;
