@@ -20,7 +20,8 @@ export const SectionFive = ({ reviews }: SectionFiveProps) => {
     return (
         <WideStrip align="center" height="300px" backgroundColor="white" className="flex flex-col justify-center">
             <TitleTextBlock
-                className="bg-white mb-16"
+                style={{ marginBottom: '3rem' }}
+                className="bg-white"
                 variant="h3"
                 fontColor="black"
                 title="What customers are saying"
