@@ -1,17 +1,12 @@
-/* eslint-disable @next/next/no-img-element */
 import { WideStrip } from '@components/common/strips/WideStrip';
-import React, { LegacyRef, useRef } from 'react';
 import { TitleTextBlock } from '../TitleTextBlock';
-
 import ImageGallery from 'react-image-gallery';
-// import { ManipulatingSwiper } from '../AlternateGallery';
+
 export interface SectionFourProps {
     galleryPhotoList: { original: string }[];
 }
-export const SectionFour = ({ galleryPhotoList }: SectionFourProps) => {
-    const ref = useRef() as LegacyRef<ImageGallery>;
 
-    // const images = galleryPhotoList.map((x) => ({ src: x.original }));
+export const SectionFour = ({ galleryPhotoList }: SectionFourProps) => {
 
     return (
         <>
@@ -19,16 +14,10 @@ export const SectionFour = ({ galleryPhotoList }: SectionFourProps) => {
                 <div className="w-full h-2/3">
                     <TitleTextBlock className="pb-20" variant="h3" fontColor="white" title="Photo Gallery" />
                     <div className="flex mb-12 w-full">
-                        <ImageGallery ref={ref} items={galleryPhotoList} />
+                        <ImageGallery items={galleryPhotoList} />
                     </div>
                 </div>
             </WideStrip>
-
-            {/* <WideStrip align="center" height="300px" backgroundColor="gray">
-                <div className="w-full">
-                    <ManipulatingSwiper images={images} />
-                </div>
-            </WideStrip> */}
         </>
     );
 };

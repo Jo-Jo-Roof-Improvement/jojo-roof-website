@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 // const CopyPlugin = require('copy-webpack-plugin');
+const path = require('path');
 
 module.exports = {
     reactStrictMode: true,
@@ -21,6 +22,10 @@ module.exports = {
         //         ],
         //     })
         // );
+        config.resolve.alias = {
+            ...config.resolve.alias,
+            react: path.resolve('./node_modules/react'),
+        };
         config.resolve.fallback = { fs: false };
         return config;
     },

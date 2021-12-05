@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from 'react';
-import { Card, Dialog, Paper, Rating } from '@mui/material';
+import { useState } from 'react';
+import { Dialog, Paper, Rating } from '@mui/material';
 import { TextBlock } from '@components/common/text/TextBlock';
 import { GoogleReview } from 'types';
 import { format } from 'date-fns';
@@ -28,12 +28,17 @@ export const CardWithSlideOver = ({ review }: CardWithSlideOverProps) => {
                 <TextBlock className="text-center" color="black" variant="body1">
                     &ldquo;{review.text.slice(0, 100)}&rdquo;
                 </TextBlock>
-                <TextBlock onClick={toggleDialog} className="cursor-pointer hover:shadow-xl text-center p-2 rounded-full" color="black" variant="body2">
+                <TextBlock
+                    onClick={toggleDialog}
+                    className="cursor-pointer hover:shadow-xl text-center p-2 rounded-full"
+                    color="black"
+                    variant="body2"
+                >
                     Read More...
                 </TextBlock>
                 <div>
                     <AdornedText
-                    containerClassName="items-center"
+                        containerClassName="items-center"
                         StartAdornment={
                             <div className="rounded-full h-16 w-16 mr-10 p-1 z-50">
                                 <img src="/brand-images/googlemaps.jpg" className="rounded-full ring-2" alt="" />

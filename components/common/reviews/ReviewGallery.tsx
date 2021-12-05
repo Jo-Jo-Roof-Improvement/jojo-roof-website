@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
 import { CardWithSlideOver } from '../../pages/Home/CardWithSlideOver';
 import { GoogleReview } from 'types';
 import { useMediaQuery, useTheme } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useState } from 'react';
 
 export const ReviewGallery = ({ reviews }: { reviews: GoogleReview[] }) => {
     const theme = useTheme();
@@ -25,6 +25,7 @@ export const ReviewGallery = ({ reviews }: { reviews: GoogleReview[] }) => {
             pagination={{
                 clickable: false,
             }}
+            // slidesPerView={1}
             slidesPerView={matchesSmall ? 1 : matchesMedium ? 2 : 3}
             onSwiper={(swiper) => setSwiper(swiper)}
         >

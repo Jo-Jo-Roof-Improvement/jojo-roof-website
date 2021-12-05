@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import classNames from 'classnames';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './NavigationBar.module.css';
 
 interface NavBarLogoImageProps {

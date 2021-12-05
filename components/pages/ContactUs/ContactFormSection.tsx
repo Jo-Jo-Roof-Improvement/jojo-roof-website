@@ -1,7 +1,7 @@
 import { JoButton } from '@components/common/buttons/JoButton';
 import { TextBlock } from '@components/common/text/TextBlock';
 import { CircularProgress, Slide, SlideProps, Snackbar } from '@mui/material';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { TitleTextBlock } from '../Home/TitleTextBlock';
 import { FormItem } from './FormItem';
 import { FormMessage } from './FormMessage';
@@ -98,10 +98,9 @@ export const ContactFormSection = () => {
                             height: '50px',
                             backgroundColor: 'gray',
                             marginTop: '1.25rem',
-                            color: "black",
-                            fontSize: "1.25rem",
-                            lineHeight: "1.75rem",
-
+                            color: 'black',
+                            fontSize: '1.25rem',
+                            lineHeight: '1.75rem',
                         }}
                     >
                         {!spinning ? 'Submit' : 'Submitting...'}
