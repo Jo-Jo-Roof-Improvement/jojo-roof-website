@@ -11,9 +11,7 @@ export interface LayoutProps {
     showWidget?: boolean;
 }
 
-const test = 'https://staging.widget.palavyr.com/widget?key=cbb41bf2-a8ee-4e77-b0f8-2e493e5ab6a4';
-
-const jojo = 'https://staging.widget.palavyr.com/widget?key=e7e3f1cc-0db9-438a-ab94-66de64a77c0c';
+const jojo = 'https://widget.palavyr.com/widget?key=e7e3f1cc-0db9-438a-ab94-66de64a77c0c';
 
 export const Layout = ({ children, pageTitle, showWidget = true }: LayoutProps) => {
     return (
