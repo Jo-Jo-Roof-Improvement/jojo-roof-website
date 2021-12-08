@@ -1,11 +1,11 @@
 
 import { TextBlock } from '@components/common/text/TextBlock';
 
-export const PaulsClaim = () => {
+export const Claims = () => {
     return (
         <div className="flex w-full pb-4 pt-4 text-center justify-center">
             <TextBlock paddingRight="5px" align="center" fontSize="10pt">
-                Website built by{'  '}
+                Design by Yessica Rico; Built by{'  '}
             </TextBlock>
             <a
                 className="flex items-center"

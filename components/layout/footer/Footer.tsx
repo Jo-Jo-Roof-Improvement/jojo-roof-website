@@ -4,7 +4,7 @@ import { SocialMediaSection } from './SocialMediaSectionProps';
 import { CheckUsOut } from './CheckUsOut';
 import { SocialMediaIcons } from './SocialMediaIcons';
 import { CopyrightStrip } from './CopyrightStrip';
-import { PaulsClaim } from './PaulsClaim';
+import { Claims } from './PaulsClaim';
 
 export const Footer = () => {
     return (
@@ -15,7 +15,7 @@ export const Footer = () => {
                     <SocialMediaIcons />
                 </SocialMediaSection>
                 <CopyrightStrip />
-                <PaulsClaim />
+                <Claims />
             </StripBase>
         </>
     );
