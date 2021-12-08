@@ -17,7 +17,7 @@ export const Layout = ({ children, pageTitle, showWidget = true }: LayoutProps) 
     return (
         <>
             <PageHead pageTitle={pageTitle} />
-            {/* <FreeQuoteToday /> */}
+            <FreeQuoteToday />
             <NavigationBar imgSrc="/brand-images/logo.png" />
             <div style={{ height: '105px' }} className="w-full h-auto"></div>
             {children}

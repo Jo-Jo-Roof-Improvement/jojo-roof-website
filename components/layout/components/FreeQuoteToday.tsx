@@ -9,8 +9,8 @@ export const FreeQuoteToday = () => {
             <AdornedText
                 textClassName="text-white"
                 fontVariant="secondary"
-                StartAdornment={<FlareIcon />}
-                EndAdornment={<FlareIcon />}
+                StartAdornment={<FlareIcon style={{ color: '#E5E39B' }} />}
+                EndAdornment={<FlareIcon style={{ color: '#E5E39B' }} />}
                 padAdornment={1}
                 variant="body2"
                 text="Get a Free Quote Today!"
