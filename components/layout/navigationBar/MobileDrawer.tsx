@@ -1,4 +1,3 @@
-
 import styles from './NavigationBar.module.css';
 import { Drawer } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
@@ -12,7 +11,8 @@ interface MobileDrawerProps {
 export const MobileDrawer = ({ open, toggle, children }: MobileDrawerProps) => {
     return (
         <Drawer
-            className={classNames(styles.drawer, "md:invisible")}
+            PaperProps={{ style: { backgroundColor: 'rgba(23, 23, 23, 0.95)' } }}
+            className={classNames(styles.drawer, 'md:invisible')}
             classes={{ paper: styles.drawerPaper }}
             anchor="left"
             open={open}

@@ -55,11 +55,12 @@ export const ServiceSection = ({
                 </div>
                 <div className="md:w-1/2">
                     <FullWidthImage
-                        containerClassNames="hidden md:flex"
+                        containerClassNames={'hidden md:flex '}
                         src={imageSrc}
                         height="350px"
                         objectPosition="50%"
-                        objectFit="cover"
+                        objectFit="scale-down"
+                        otherStyles={{ backgroundColor: backgroundColor }}
                     />
                 </div>
             </div>

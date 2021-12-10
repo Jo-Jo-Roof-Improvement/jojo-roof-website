@@ -32,6 +32,7 @@ export const CollapsableMenu = ({ fontSize }: { fontSize: string }) => {
                 <KeyboardArrowDownIcon className="text-white mt-1 ml-1" />
             </div>
             <JoMenu
+                backgroundColor='rgb(24,24,32)'
                 className="text-white"
                 anchorEl={anchorEl}
                 PopoverClasses={{ paper: `${styles.backgroundColor} text-white` }}

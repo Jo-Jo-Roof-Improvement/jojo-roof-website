@@ -1,17 +1,17 @@
-
 import { Menu, MenuProps } from '@mui/material';
 
+export interface JoMenuProps extends MenuProps {
+    backgroundColor?: string;
+}
 
-export interface JoMenuProps extends MenuProps { }
-
-export const JoMenu = ({ children, anchorEl, onClose, open, ...rest }: JoMenuProps) => {
+export const JoMenu = ({ children, anchorEl, onClose, open, backgroundColor = '', ...rest }: JoMenuProps) => {
     return (
         <Menu
-            id="basic-menu"
             anchorEl={anchorEl}
             open={open}
             onClose={onClose}
             MenuListProps={{
+                style: { backgroundColor: backgroundColor },
                 'aria-labelledby': 'basic-button',
             }}
             {...rest}

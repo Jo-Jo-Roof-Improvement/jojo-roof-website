@@ -2,8 +2,8 @@ import { Footer } from './footer/Footer';
 import { PageHead } from './head/PageHead';
 import { NavigationBar } from './navigationBar/NavigationBar';
 import { FreeQuoteToday } from './components/FreeQuoteToday';
-import Widget from 'palavyr-chat-widget';
-import 'palavyr-chat-widget/dist/styles.css';
+import { Widget } from 'palavyr-iframe-widget';
+import 'palavyr-iframe-widget/dist/styles.css';
 
 export interface LayoutProps {
     children: React.ReactNode;
