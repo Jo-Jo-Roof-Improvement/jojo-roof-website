@@ -6,9 +6,8 @@ const GOOGLE_PLACES_API_REVIEWS = (apiKey: string, placeId: string) => {
 };
 
 export async function getReviews() {
-    const response = await fetch(
-        GOOGLE_PLACES_API_REVIEWS('AIzaSyBi2f37vN-5tpaV3koEmoTK2RENKJ1SntU', COMPANYGOOGLECODE)
-    );
+    const apikey = process.env.NEXT_PUBLIC_GOOGLE_PLACE_API_KEY as string;
+    const response = await fetch(GOOGLE_PLACES_API_REVIEWS(apikey, COMPANYGOOGLECODE));
     const data = await response.json();
     const reviews = data.result.reviews as GoogleReview[];
 
