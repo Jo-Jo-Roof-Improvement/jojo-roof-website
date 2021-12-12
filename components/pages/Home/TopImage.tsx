@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 //https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit
 
+import { ZoomImage } from '@components/common/image/ZoomInImage';
 import classNames from 'classnames';
 
 export interface FullWidthImageProps {
@@ -27,10 +28,10 @@ export const FullWidthImage = ({
 }: FullWidthImageProps) => {
     return (
         <div className={classNames('bg-black w-full h-auto', containerClassNames)}>
-            <img
-                className={className}
-                src={src}
+            <ZoomImage
+                imgSrc={src}
                 alt={alt}
+                className={className}
                 style={{ width, height, objectFit, objectPosition: objectPosition, ...otherStyles }}
             />
         </div>
