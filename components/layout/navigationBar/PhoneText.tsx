@@ -10,10 +10,6 @@ export const PhoneText = ({ phoneNumber, className, ...rest }: PhoneTextProps) =
     const query = useMediaQuery('(min-width:600px)');
 
     const onClick = () => {
-        // if its mobile...
-
-
-
         window.location.href = `tel:${phoneNumber}`;
     };
 

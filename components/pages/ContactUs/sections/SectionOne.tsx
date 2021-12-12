@@ -5,7 +5,7 @@ import { TitleTextBlock } from '../../Home/TitleTextBlock';
 
 export const SectionOne = () => {
     return (
-        <WideStrip height="100px">
+        <WideStrip height="200px" >
             <TitleTextBlock title="Contact Us" />
         </WideStrip>
     );

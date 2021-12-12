@@ -22,6 +22,7 @@ export const ContactUsPage = () => {
                 notificationDelay={60000} // 1 minute
                 notificationSound
                 height={500}
+                styles={{ marginRight: '5rem' }}
             />
         </Layout>
     );

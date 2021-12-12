@@ -3,6 +3,8 @@ import { TextBlock } from '@components/common/text/TextBlock';
 import { TitleTextBlock } from '../Home/TitleTextBlock';
 import { JoList } from '@components/common/lists/JoList';
 import { OperatingHoursItem } from './OperatingHoursItem';
+import { PHONENUMBER } from 'company';
+import { PhoneText } from '@components/layout/navigationBar/PhoneText';
 
 export const ContactInfo = () => {
     const businessHours = [
@@ -27,9 +29,17 @@ export const ContactInfo = () => {
             <TextBlock style={{ paddingBottom: '2rem', paddingTop: '2rem' }} className="text-gray-400" align="center">
                 Melbourne, Victoria, Australia
             </TextBlock>
-            <TextBlock variant="h4" color="white" align="center" className="mt-10">
-                +61 04 3388 1760
-            </TextBlock>
+            <PhoneText
+                phoneNumber={PHONENUMBER}
+                className="text-white text-center"
+                style={{
+                    fontSize: '22pt',
+                    textAlign: 'center',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    marginTop: '2rem',
+                }}
+            />
             <div>
                 <TitleTextBlock align="center" title="Business Hours" variant="h4" gutterBottom />
                 <JoList className="text-white text-center" paddingBottom="" paddingLeft="">
