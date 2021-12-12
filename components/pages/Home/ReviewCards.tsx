@@ -1,7 +1,5 @@
-
 import { GoogleReview } from 'types';
 import { CardWithSlideOver } from './CardWithSlideOver';
-
 
 export interface ReviewCardsProps {
     reviews: GoogleReview[];
