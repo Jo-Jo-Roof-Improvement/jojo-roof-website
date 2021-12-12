@@ -13,7 +13,7 @@ import * as gtag from '../lib/gtag';
 import { Widget } from 'palavyr-iframe-widget';
 import 'palavyr-iframe-widget/dist/styles.css';
 
-const jojo = () => `https://widget.palavyr.com/widget?key=${process.env.PalavyrApiKey}`;
+const jojo = () => `https://widget.palavyr.com/widget?key=${process.env.NEXT_PUBLIC_PALAVYR_API_KEY}`;
 
 function MyApp({ Component, pageProps }: AppProps) {
     const router = useRouter();
