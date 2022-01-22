@@ -6,10 +6,9 @@ import { FreeQuoteToday } from './components/FreeQuoteToday';
 export interface LayoutProps {
     children: React.ReactNode;
     pageTitle: string;
-    showWidget?: boolean;
 }
 
-export const Layout = ({ children, pageTitle, showWidget = true }: LayoutProps) => {
+export const Layout = ({ children, pageTitle }: LayoutProps) => {
     return (
         <>
             <PageHead pageTitle={pageTitle} />
