@@ -8,7 +8,7 @@ import { SectionTwo } from './sections/SectionTwo';
 
 export const ContactUsPage = () => {
     return (
-        <Layout pageTitle={`${COMPANYNAME} - Contact Us`} showWidget={false}>
+        <Layout pageTitle={`${COMPANYNAME} - Contact Us`}>
             <SectionOne />
             <SectionTwo />
             <SectionThree />
