@@ -12,7 +12,6 @@ import React, { Dispatch, SetStateAction, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import * as gtag from '../lib/gtag';
 import PalavyrChatWidget from 'palavyr-chat-widget';
-import Image from 'next/image';
 
 export type SetState<T> = Dispatch<SetStateAction<T>>;
 
@@ -31,8 +30,8 @@ const containerStyles = {
 
 function MyApp({ Component, pageProps }: AppProps) {
     const router = useRouter();
-    const onToggle = (widgetOpenState: boolean, setWidgetOpenState: SetState<boolean>) => {
-        if (!widgetOpenState) {
+    const onEffect = (widgetOpenState: boolean, setWidgetOpenState: SetState<boolean>) => {
+        if (widgetOpenState === false && router.pathname === '/contact-us') {
             setWidgetOpenState(true);
         }
     };
@@ -58,11 +57,21 @@ function MyApp({ Component, pageProps }: AppProps) {
                 fixedPosition={true}
                 containerStyles={containerStyles}
                 resizable
-                onToggle={onToggle}
+                onEffect={onEffect}
+                onEffectDependencyArray={[router.pathname]}
                 launcherOpenImg="/brand-images/logo.png"
                 IframeProps={{ style: { height: '100%', width: '100%', zIndex: 1000 }, id: 'jojos-widget' }}
-                openImgProps={{ style: {padding: "10px", objectFit: 'contain', height: '100%', width: '100%', zIndex: 1000 } }}
-                launcherButtonAdditionalStyles={{height: '80px', width: '80px', borderRadius: '50%', background: 'black', border: '2px solid white', boxShadow: 'none'}}
+                openImgProps={{
+                    style: { padding: '10px', objectFit: 'contain', height: '100%', width: '100%', zIndex: 1000 },
+                }}
+                launcherButtonAdditionalStyles={{
+                    height: '50px',
+                    width: '50px',
+                    borderRadius: '50%',
+                    background: 'black',
+                    border: '2px solid white',
+                    boxShadow: 'none',
+                }}
             />
         </>
     );
