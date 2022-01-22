@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useCallback, useEffect } from 'react';
 import { Backdrop, Portal, Theme } from '@mui/material';
-
 import { makeStyles } from '@mui/styles';
 import classNames from 'classnames';
 
@@ -80,7 +79,6 @@ export const ZoomImage = ({ alt, imgSrc, style, className = '' }: IZoomImage) =>
 
     return (
         <>
-            {/* <ScrollbarSize onChange={setScrollbarSize}></ScrollbarSize> */}
             {zoomedIn && (
                 <Portal>
                     <Backdrop open={zoomedIn} className={cls.backdrop} onClick={zoomOut}></Backdrop>

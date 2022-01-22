@@ -19,22 +19,43 @@ const jojo = () => `https://widget.palavyr.com/widget?key=${process.env.NEXT_PUB
 const containerStyles = {
     marginTop: '0rem',
     marginBottom: '0rem',
-    height: '660px',
+    height: '600px',
     width: '420px',
     borderRadius: '9px',
     border: '0px',
-    background: '#FFFFFF',
     boxShadow: 'none',
     zIndex: 1000,
 };
 
 function MyApp({ Component, pageProps }: AppProps) {
     const router = useRouter();
+    let toggleCheat: SetState<boolean>;
+
     const onEffect = (widgetOpenState: boolean, setWidgetOpenState: SetState<boolean>) => {
         if (widgetOpenState === false && router.pathname === '/contact-us') {
             setWidgetOpenState(true);
+        } else if (router.pathname === '/contact-us') {
+            // do nothing
+        } else {
+            setWidgetOpenState(false);
         }
+        toggleCheat = setWidgetOpenState;
     };
+
+    useEffect(() => {
+        const escFunction = (event: { keyCode: number }) => {
+            if (event.keyCode === 27) {
+                if (toggleCheat) {
+                    toggleCheat(false);
+                }
+            }
+        };
+        document.addEventListener('keydown', escFunction, false);
+        return () => {
+            document.removeEventListener('keydown', escFunction, false);
+        };
+        // @ts-ignore
+    }, [toggleCheat]);
 
     useEffect(() => {
         const handleRouteChange = (url: string) => {
@@ -65,10 +86,10 @@ function MyApp({ Component, pageProps }: AppProps) {
                     style: { padding: '10px', objectFit: 'contain', height: '100%', width: '100%', zIndex: 1000 },
                 }}
                 launcherButtonAdditionalStyles={{
-                    height: '50px',
-                    width: '50px',
+                    height: '75px',
+                    width: '75px',
                     borderRadius: '50%',
-                    background: 'black',
+                    background: '#454040',
                     border: '2px solid white',
                     boxShadow: 'none',
                 }}

@@ -11,6 +11,7 @@ export interface AdornedText {
     textClassName?: string;
     containerClassName?: string;
     fontVariant?: 'primary' | 'secondary';
+    onClick?: () => void;
 }
 
 export const AdornedText = ({
@@ -22,7 +23,7 @@ export const AdornedText = ({
     padAdornment,
     textClassName,
     containerClassName,
-
+    onClick,
 }: AdornedText) => {
     const adornmentStyle = {
         verticalAlign: 'middle',
@@ -36,7 +37,12 @@ export const AdornedText = ({
     };
 
     return (
-        <div className={classNames('flex flex-row justify-around h-full', containerClassName)}>
+        <div
+            className={classNames('flex flex-row justify-around h-full', containerClassName, {
+                'cursor-pointer': onClick !== undefined,
+            })}
+            onClick={onClick}
+        >
             {StartAdornment && <div style={adornmentStyle}>{StartAdornment}</div>}
             <Typography
                 fontFamily={fontVariant === 'primary' ? 'Fjalla One' : 'Source Sans Pro'}
