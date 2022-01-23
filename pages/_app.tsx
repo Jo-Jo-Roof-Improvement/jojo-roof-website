@@ -43,6 +43,15 @@ function MyApp({ Component, pageProps }: AppProps) {
     };
 
     useEffect(() => {
+        setTimeout(() => {
+            if (toggleCheat !== undefined) {
+                toggleCheat(true);
+            }
+        }, 13000);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    useEffect(() => {
         const escFunction = (event: { keyCode: number }) => {
             if (event.keyCode === 27) {
                 if (toggleCheat) {
@@ -74,6 +83,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             </ThemeProvider>
 
             <PalavyrChatWidget
+                disableBounce
                 src={jojo()}
                 fixedPosition={true}
                 containerStyles={containerStyles}
@@ -81,17 +91,18 @@ function MyApp({ Component, pageProps }: AppProps) {
                 onEffect={onEffect}
                 onEffectDependencyArray={[router.pathname]}
                 launcherOpenImg="/brand-images/logo.png"
-                IframeProps={{ style: { height: '100%', width: '100%', zIndex: 1000 }, id: 'jojos-widget' }}
+                IframeProps={{ style: { border: "0px solid white", borderRadius: "6px", height: '100%', width: '100%', zIndex: 1000 }, id: 'jojos-widget' }}
                 openImgProps={{
                     style: { padding: '10px', objectFit: 'contain', height: '100%', width: '100%', zIndex: 1000 },
                 }}
                 launcherButtonAdditionalStyles={{
-                    height: '75px',
-                    width: '75px',
+                    height: '68px',
+                    width: '68px',
                     borderRadius: '50%',
+                    borderBottomRightRadius: '10px',
                     background: '#454040',
-                    border: '2px solid white',
-                    boxShadow: 'none',
+                    border: '5px solid white',
+                    boxShadow: '0px 0px 10px #454040',
                 }}
             />
         </>
