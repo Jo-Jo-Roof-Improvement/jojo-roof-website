@@ -2,12 +2,15 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
 import { createEmotionCache } from 'lib/utils';
 
-
 class MyDocument extends Document {
     render() {
         return (
             <Html>
                 <Head>
+                    {/* Inject MUI styles first to match with the prepend: true configuration. */}
+                    {/* @ts-ignore */}
+                    {this.props.emotionStyleTags}
+
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
 
@@ -44,7 +47,6 @@ class MyDocument extends Document {
 
 export default MyDocument;
 
-
 MyDocument.getInitialProps = async (ctx) => {
     const originalRenderPage = ctx.renderPage;
 
@@ -63,7 +65,7 @@ MyDocument.getInitialProps = async (ctx) => {
         });
 
     const initialProps = await Document.getInitialProps(ctx);
-    // This is important. It prevents emotion to render invalid HTML.
+    // This is important. It prevents emotion from rendering invalid HTML.
     // See https://github.com/mui-org/material-ui/issues/26561#issuecomment-855286153
     const emotionStyles = extractCriticalToChunks(initialProps.html);
     const emotionStyleTags = emotionStyles.styles.map((style) => (

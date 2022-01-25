@@ -1,45 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useCallback, useEffect } from 'react';
 import { Backdrop, Portal, Theme } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import classNames from 'classnames';
-
-const useStyles = makeStyles((theme: Theme) => ({
-    backdrop: {
-        zIndex: theme.zIndex.modal,
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-    },
-    portalImgWrapper: {
-        position: 'fixed',
-        top: '0',
-        left: '0',
-        width: '100%',
-        height: '100%',
-        zIndex: theme.zIndex.modal,
-        cursor: 'pointer',
-    },
-    portalImgInnerWrapper: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        width: '100%',
-        height: '100%',
-        paddingLeft: theme.spacing(1),
-        paddingRight: theme.spacing(1),
-        paddingTop: theme.spacing(1),
-        paddingBottom: theme.spacing(1),
-    },
-    portalImg: {
-        objectFit: 'contain',
-        maxWidth: '100%',
-        maxHeight: '100%',
-    },
-    zoomedOutImage: {
-        cursor: 'pointer',
-        maxWidth: '100%',
-        maxHeight: '100%',
-    },
-}));
+import cls from './ZoomInImage.module.scss';
 
 export interface IZoomImage {
     alt: string;
@@ -49,8 +12,6 @@ export interface IZoomImage {
 }
 
 export const ZoomImage = ({ alt, imgSrc, style, className = '' }: IZoomImage) => {
-    const cls = useStyles();
-
     const [zoomedIn, setZoomedIn] = useState(false);
     const [scrollbarSize, setScrollbarSize] = useState(0);
 

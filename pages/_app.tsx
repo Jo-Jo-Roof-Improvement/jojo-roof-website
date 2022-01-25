@@ -80,31 +80,39 @@ function MyApp({ Component, pageProps }: AppProps) {
         <>
             <ThemeProvider theme={theme}>
                 <Component {...pageProps} />
+                <PalavyrChatWidget
+                    disableBounce
+                    src={jojo()}
+                    fixedPosition={true}
+                    containerStyles={containerStyles}
+                    resizable
+                    onEffect={onEffect}
+                    onEffectDependencyArray={[router.pathname]}
+                    launcherOpenImg="/brand-images/logo.png"
+                    IframeProps={{
+                        style: {
+                            border: '0px solid white',
+                            borderRadius: '6px',
+                            height: '100%',
+                            width: '100%',
+                            zIndex: 1000,
+                        },
+                        id: 'jojos-widget',
+                    }}
+                    openImgProps={{
+                        style: { padding: '10px', objectFit: 'contain', height: '100%', width: '100%', zIndex: 1000 },
+                    }}
+                    launcherButtonAdditionalStyles={{
+                        height: '68px',
+                        width: '68px',
+                        borderRadius: '50%',
+                        borderBottomRightRadius: '10px',
+                        background: '#454040',
+                        border: '5px solid white',
+                        boxShadow: '0px 0px 10px #454040',
+                    }}
+                />
             </ThemeProvider>
-
-            <PalavyrChatWidget
-                disableBounce
-                src={jojo()}
-                fixedPosition={true}
-                containerStyles={containerStyles}
-                resizable
-                onEffect={onEffect}
-                onEffectDependencyArray={[router.pathname]}
-                launcherOpenImg="/brand-images/logo.png"
-                IframeProps={{ style: { border: "0px solid white", borderRadius: "6px", height: '100%', width: '100%', zIndex: 1000 }, id: 'jojos-widget' }}
-                openImgProps={{
-                    style: { padding: '10px', objectFit: 'contain', height: '100%', width: '100%', zIndex: 1000 },
-                }}
-                launcherButtonAdditionalStyles={{
-                    height: '68px',
-                    width: '68px',
-                    borderRadius: '50%',
-                    borderBottomRightRadius: '10px',
-                    background: '#454040',
-                    border: '5px solid white',
-                    boxShadow: '0px 0px 10px #454040',
-                }}
-            />
         </>
     );
 }

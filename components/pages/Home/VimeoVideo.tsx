@@ -7,7 +7,7 @@ export interface VimeoVideoProps {
 }
 export const VimeoVideo = ({ src, title = 'Vimeo Video', frameClassName = '' }: VimeoVideoProps) => {
     return (
-        <div className={classNames('w-full h-full', frameClassName)}>
+        // <div className={classNames('w-full h-full', frameClassName)}>
             <iframe
                 datatype="video/vimeo"
                 src={src}
@@ -18,6 +18,6 @@ export const VimeoVideo = ({ src, title = 'Vimeo Video', frameClassName = '' }: 
                 allow="autoplay; fullscreen"
                 allowFullScreen
             />
-        </div>
+        // </div>
     );
 };

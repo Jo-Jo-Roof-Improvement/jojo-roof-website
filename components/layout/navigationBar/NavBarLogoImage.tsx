@@ -16,6 +16,9 @@ export const NavBarLogoImage = ({ imgSrc, visibility }: NavBarLogoImageProps) =>
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
     }, []);
     return (
         <div
