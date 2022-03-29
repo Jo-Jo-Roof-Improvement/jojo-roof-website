@@ -30,8 +30,8 @@ export const HomePage = ({ galleryPhotoList, reviews }: HomePageProps) => {
 export const Header = () => {
     return (
         <WideStrip height="200px" className="flex flex-col">
-            <TitleTextBlock marginTop="" variant="h5" title="See the difference" />
-            <TitleTextBlock style={{ fontWeight: '700' }} marginTop="" variant="h2" title="Jo Jo Roof Improvement" />
+            <TitleTextBlock marginTop="" variant="h5" title="Welcome to JOJO Roof Improvement" />
+            <TitleTextBlock style={{ fontWeight: '700' }} marginTop="" variant="h2" title="The ROOF RESTORATION company that gives you the best result and satisfaction" />
         </WideStrip>
     );
 };
