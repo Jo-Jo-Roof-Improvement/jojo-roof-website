@@ -1,9 +1,7 @@
-
 import { MediumStrip } from '@components/common/strips/MediumStrip';
 import { TitleTextBlock } from '../../Home/TitleTextBlock';
 
-
-export const BeforeAndAfterSectionOne = () => {
+export const GallerySectionOne = () => {
     return (
         <MediumStrip align="center" backgroundColor="white" height="150px">
             <div className="h-full flex flex-col items-center justify-center">
