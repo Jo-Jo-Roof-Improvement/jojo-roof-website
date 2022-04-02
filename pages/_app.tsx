@@ -80,7 +80,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <>
             <ThemeProvider theme={theme}>
                 <Component {...pageProps} />
-                <PalavyrChatWidget
+                {/* <PalavyrChatWidget
                     disableBounce
                     src={jojo()}
                     fixedPosition={true}
@@ -111,7 +111,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                         border: '5px solid white',
                         boxShadow: '0px 0px 10px #454040',
                     }}
-                />
+                /> */}
             </ThemeProvider>
         </>
     );

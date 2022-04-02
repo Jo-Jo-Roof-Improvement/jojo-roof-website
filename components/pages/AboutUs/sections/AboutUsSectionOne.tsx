@@ -5,7 +5,7 @@ import { TitleTextBlock } from '../../Home/TitleTextBlock';
 import { FullWidthImage } from '../../Home/TopImage';
 
 export const AboutUsSectionOne = () => {
-    const textblockClasses = 'flex pl-7 pr-7 pb-10 text-white text-center lg:text-left ';
+    const textblockClasses = 'pl-7 pr-7 pb-10 text-white text-center';
     return (
         <WideStrip align="center" className="flex flex-col lg:flex-row lg:justify-evenly">
             <div className="flex lg:hidden w-full">
@@ -37,7 +37,12 @@ export const AboutUsSectionOne = () => {
                 </TextBlock>
             </div>
             <div className="hidden lg:flex h-full">
-                <FullWidthImage src="/brand-images/jojo-with-logo.png" objectFit="cover" objectPosition="50% 0" width="100%" />
+                <FullWidthImage
+                    src="/brand-images/jojo-with-logo.png"
+                    objectFit="cover"
+                    objectPosition="50% 0"
+                    width="100%"
+                />
             </div>
         </WideStrip>
     );

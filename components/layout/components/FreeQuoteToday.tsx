@@ -3,8 +3,9 @@ import { ThinStrip } from '@components/common/strips/ThinStrip';
 import FlareIcon from '@mui/icons-material/Flare';
 import { AdornedText } from '@components/common/text/AdornedText';
 import { useRouter } from 'next/router';
+import { forwardRef } from 'react';
 
-export const FreeQuoteToday = () => {
+export const FreeQuoteToday = forwardRef<HTMLDivElement, {}>(() => {
     const router = useRouter();
     return (
         <ThinStrip backgroundColor="#191921" align="center">
@@ -20,4 +21,6 @@ export const FreeQuoteToday = () => {
             />
         </ThinStrip>
     );
-};
+});
+
+FreeQuoteToday.displayName = 'FreeQuoteToday';
