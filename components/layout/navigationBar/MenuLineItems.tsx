@@ -40,6 +40,12 @@ export const MenuLineItems = () => {
                     href={Routes.ContactUs}
                     bold={router.pathname === Routes.ContactUs}
                 />
+                <JoDrawerMenuItem
+                    fontSize={fontsize}
+                    text="Blog"
+                    href={Routes.Blog}
+                    bold={router.pathname === Routes.Blog}
+                />
             </div>
             <div className="md:flex md:flex-grow md:justify-around hidden lg:hidden">
                 <JoDrawerMenuItem

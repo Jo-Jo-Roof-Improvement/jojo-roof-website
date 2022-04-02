@@ -1,7 +1,6 @@
-
 import { useRouter } from 'next/router';
-import { DrawerItem } from "./DrawerItem";
-import { Routes } from "./Routes";
+import { DrawerItem } from './DrawerItem';
+import { Routes } from './Routes';
 
 export const MobileDrawerItems = () => {
     const router = useRouter();
@@ -15,8 +14,9 @@ export const MobileDrawerItems = () => {
                 text="Contact Us"
                 href="/contact-us"
                 bold={router.pathname === Routes.ContactUs}
-                divider={false}
+                divider={true}
             />
+            <DrawerItem text="Blog" href={Routes.Blog} bold={router.pathname === Routes.Blog} divider={false} />
         </div>
     );
 };

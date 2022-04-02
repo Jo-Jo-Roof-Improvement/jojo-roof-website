@@ -8,6 +8,16 @@ export const SCREEN_XLARGE = 1200; // Xlarge=1200
 export const SCREEN_XXLARGE = 1600; // XXlarge=1600
 export const SCREEN_XXXLARGE = 2560; // XXXlarge=2560
 
+export const Breakpoints = {
+    xs: SCREEN_XSMALL,
+    sm: SCREEN_SMALL,
+    md: SCREEN_MEDIUM,
+    lg: SCREEN_LARGE,
+    xl: SCREEN_XLARGE,
+    xxl: SCREEN_XXLARGE,
+    xxxl: SCREEN_XXXLARGE,
+};
+
 export const theme = createTheme({
     breakpoints: {
         values: {

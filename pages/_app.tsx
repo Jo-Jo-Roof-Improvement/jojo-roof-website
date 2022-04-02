@@ -36,6 +36,8 @@ function MyApp({ Component, pageProps }: AppProps) {
             setWidgetOpenState(true);
         } else if (router.pathname === '/contact-us') {
             // do nothing
+        } else if (router.pathname === '/posts') {
+            setWidgetOpenState(false);
         } else {
             setWidgetOpenState(false);
         }
@@ -45,7 +47,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     useEffect(() => {
         setTimeout(() => {
             if (toggleCheat !== undefined) {
-                toggleCheat(true);
+                if (router.pathname !== '/posts' && !router.pathname.startsWith('/posts/')) {
+                    toggleCheat(true);
+                }
             }
         }, 13000);
         // eslint-disable-next-line react-hooks/exhaustive-deps
