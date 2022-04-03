@@ -2,10 +2,11 @@ import { Layout } from '@components/layout/Layout';
 import { COMPANYNAME } from 'company';
 
 import { SectionThree } from './sections/SectionThree';
-import { SectionThreeB } from './sections/SectionThreeB';
+import { ServiceSummaries } from './sections/ServiceSummarySection';
 import { SectionOne } from './sections/SectionOne';
-import { SectionTwo, SectionTwoC } from './sections/SectionTwo';
-import { SectionTwoB } from './sections/SectionTwoB';
+import { SectionTwo } from './sections/SectionTwo';
+import { InfoStrip_ProfessionalRestoration } from "./sections/InfoStrip_ProfessionalRestoration";
+import { SectionTwoB } from './sections/InfoCardsSection';
 import { SectionFive } from './sections/SectionFive';
 import { GoogleReview } from 'types';
 import { SectionFour } from './sections/SectionFour';
@@ -13,7 +14,7 @@ import { WideStrip } from '@components/common/strips/WideStrip';
 import { TitleTextBlock } from './TitleTextBlock';
 import { OFFWHITE } from 'styles/theme';
 import { MiniContactUsPageForLanding } from '../ContactUs/ContactUsPage';
-import { SectionThreeC } from './sections/SectionThreeC';
+import { ProductSections } from './sections/ProductsSection';
 
 export interface HomePageProps {
     galleryPhotoList: { original: string }[];
@@ -24,13 +25,13 @@ export const HomePage = ({ galleryPhotoList, reviews }: HomePageProps) => {
         <Layout pageTitle={`${COMPANYNAME} - Home`}>
             <Header />
             <SectionOne />
-            <SectionTwoC />
+            <InfoStrip_ProfessionalRestoration />
             <SectionTwoB />
             <SectionTwo />
             <SectionThree />
-            <SectionThreeB />
+            <ServiceSummaries />
+            {/* <ProductSections /> */}
             <SectionFour galleryPhotoList={galleryPhotoList} />
-            <SectionThreeC />
             <SectionFive reviews={reviews} />
             <MiniContactUsPageForLanding />
         </Layout>

@@ -3,6 +3,7 @@ import { GoogleReview } from 'types';
 import { useMediaQuery, useTheme } from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState } from 'react';
+import { OFFWHITE } from 'styles/theme';
 
 export const ReviewGallery = ({ reviews }: { reviews: GoogleReview[] }) => {
     const theme = useTheme();
@@ -41,7 +42,7 @@ export const ReviewGallery = ({ reviews }: { reviews: GoogleReview[] }) => {
             onSwiper={(swiper) => setSwiper(swiper)}
         >
             {reviews.map((review: GoogleReview, key: number) => (
-                <SwiperSlide className="pb-16" key={review.profile_photo_url}>
+                <SwiperSlide style={{ backgroundColor: OFFWHITE }} className="pb-16 pr-3 pl-3" key={review.profile_photo_url}>
                     <CardWithSlideOver key={key} review={review} />
                 </SwiperSlide>
             ))}

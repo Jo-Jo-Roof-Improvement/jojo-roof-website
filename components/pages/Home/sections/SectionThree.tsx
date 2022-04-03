@@ -21,7 +21,7 @@ export const SectionThree = () => {
                     <TitleTextBlock
                         className="pt-10"
                         marginTop=""
-                        variant="h4"
+                        variant="h2"
                         fontColor="black"
                         title="We Deliver Top Quality at the Best Prices"
                     />

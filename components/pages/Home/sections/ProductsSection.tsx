@@ -3,13 +3,13 @@ import { TextBlock } from '@components/common/text/TextBlock';
 import { Grid, Paper } from '@mui/material';
 import { NAVBLUE, OFFWHITE } from 'styles/theme';
 import { FullWidthImage } from '../TopImage';
-import cls from './SectionTwoB.module.scss';
+import cls from './InfoCardsSection.module.scss';
 
 const gridMargin = '1rem';
 
 const xs = 5;
 
-export const SectionThreeC = () => {
+export const ProductSections = () => {
     return (
         <WideStrip
             align="center"
@@ -87,7 +87,7 @@ const ServiceCard = ({
     return (
         <Paper className={cls.paper3}>
             <FullWidthImage height="250px" src={src} otherStyles={imgStyle} />
-            <TextBlock variant="h4" gutterBottom style={{ marginTop: '1.2rem' }}>
+            <TextBlock align="center" variant="h4" gutterBottom style={{ marginTop: '1.2rem' }}>
                 {title}
             </TextBlock>
             <div

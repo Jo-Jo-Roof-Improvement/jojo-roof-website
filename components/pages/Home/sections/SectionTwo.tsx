@@ -10,7 +10,7 @@ export const SectionTwo = () => {
                 <TitleTextBlock className="pl-2 pr-2 pb-6">
                     See our amazing before and after roof restoration results
                 </TitleTextBlock>
-                <TitleTextBlock>Results that last!</TitleTextBlock>
+                <TitleTextBlock className="pb-3">Results that last!</TitleTextBlock>
                 <div className="flex flex-col md:flex-row md:w-full">
                     <VideoWithTextBelow
                         src="//player.vimeo.com/video/589829430?autoplay=0&amp;title=0&amp;portrait=0&amp;byline=0&amp;badge=0"
@@ -25,22 +25,6 @@ export const SectionTwo = () => {
                         buttonText="Get a free quote today"
                     />
                 </div>
-            </div>
-        </WideStrip>
-    );
-};
-
-export const SectionTwoC = () => {
-    return (
-        <WideStrip align="center" height="200px">
-            <div className="items-center w-full">
-                <TitleTextBlock marginTop="" variant="h2" title="Professional Roof Restoration" className="pl-2 pr-2" />
-                <TitleTextBlock
-                    variant="h2"
-                    title="at unbeatable price and quality!"
-                    className="pl-2 pr-2"
-                    marginTop=""
-                />
             </div>
         </WideStrip>
     );

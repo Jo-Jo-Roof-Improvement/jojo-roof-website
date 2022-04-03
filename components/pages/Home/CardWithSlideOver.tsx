@@ -26,7 +26,7 @@ export const CardWithSlideOver = ({ review }: CardWithSlideOverProps) => {
                 </div>
                 <Rating value={review.rating} readOnly size="large" />
                 <TextBlock className="text-center" color="black" variant="body1">
-                    &ldquo;{review.text.slice(0, 100)}&rdquo;
+                    &ldquo;{review.text.slice(0, 100)}...&rdquo;
                 </TextBlock>
                 <TextBlock
                     onClick={toggleDialog}

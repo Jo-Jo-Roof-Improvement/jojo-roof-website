@@ -5,7 +5,7 @@ import { Grid, Paper, Theme } from '@mui/material';
 import React from 'react';
 import { OFFWHITE } from 'styles/theme';
 import { TextBlockSection } from '../TextBlockSection';
-import cls from './SectionTwoB.module.scss';
+import cls from './InfoCardsSection.module.scss';
 
 const shield = 'brand-images/shield.png';
 const stress = 'brand-images/stress.png';

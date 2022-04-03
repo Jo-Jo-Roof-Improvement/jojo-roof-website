@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { WideStrip } from '@components/common/strips/WideStrip';
 import { TitleTextBlock } from '../TitleTextBlock';
 import { GoogleReview } from 'types';
