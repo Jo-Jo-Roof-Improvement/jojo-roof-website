@@ -6,7 +6,8 @@ import { TitleTextBlock } from '../Home/TitleTextBlock';
 import { FullWidthImage } from '../Home/TopImage';
 
 export interface ServiceSectionProps {
-    title: string;
+    title?: React.ReactNode;
+    children?: React.ReactNode;
     textColor: string;
     header: string;
     body: React.ReactNode;
@@ -16,6 +17,7 @@ export interface ServiceSectionProps {
 }
 export const ServiceSection = ({
     title,
+    children,
     textColor,
     header,
     body,
@@ -31,7 +33,9 @@ export const ServiceSection = ({
                 title={title}
                 marginTop=""
                 containerClassName="pt-10 md:pt-0 md:pb-5"
-            />
+            >
+                {children}
+            </TitleTextBlock>
             <div className="flex flex-col md:flex-row pl-8 pr-8 pt-10 items-center">
                 <FullWidthImage
                     containerClassNames="md:hidden"

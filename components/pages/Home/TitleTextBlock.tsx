@@ -3,6 +3,7 @@ import { TypographyProps } from '@mui/material';
 import classNames from 'classnames';
 
 export const TitleTextBlock = ({
+    children,
     title,
     fontColor = 'white',
     variant = 'h3',
@@ -13,7 +14,8 @@ export const TitleTextBlock = ({
     align = 'center',
     style = {},
 }: TypographyProps & {
-    title: string;
+    title?: React.ReactNode;
+    children?: React.ReactNode;
     fontColor?: string;
     variant?: TypographyProps['variant'];
     className?: string;
@@ -32,6 +34,7 @@ export const TitleTextBlock = ({
                 className={className}
             >
                 {title}
+                {children}
             </TextBlock>
         </div>
     );

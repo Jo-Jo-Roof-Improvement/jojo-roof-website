@@ -12,6 +12,7 @@ import React, { Dispatch, SetStateAction, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import * as gtag from '../lib/gtag';
 import PalavyrChatWidget from 'palavyr-chat-widget';
+import { Alert } from '@mui/material';
 
 export type SetState<T> = Dispatch<SetStateAction<T>>;
 
@@ -81,43 +82,44 @@ function MyApp({ Component, pageProps }: AppProps) {
     }, [router.events]);
 
     return (
-        <>
-            <ThemeProvider theme={theme}>
-                <Component {...pageProps} />
-                <PalavyrChatWidget
-                    disableBounce
-                    src={jojo()}
-                    fixedPosition={true}
-                    containerStyles={containerStyles}
-                    resizable
-                    onEffect={onEffect}
-                    onEffectDependencyArray={[router.pathname]}
-                    launcherOpenImg="/brand-images/logo.png"
-                    IframeProps={{
-                        style: {
-                            border: '0px solid white',
-                            borderRadius: '6px',
-                            height: '100%',
-                            width: '100%',
-                            zIndex: 1000,
-                        },
-                        id: 'jojos-widget',
-                    }}
-                    openImgProps={{
-                        style: { padding: '10px', objectFit: 'contain', height: '100%', width: '100%', zIndex: 1000 },
-                    }}
-                    launcherButtonAdditionalStyles={{
-                        height: '68px',
-                        width: '68px',
-                        borderRadius: '50%',
-                        borderBottomRightRadius: '10px',
-                        background: '#454040',
-                        border: '5px solid white',
-                        boxShadow: '0px 0px 10px #454040',
-                    }}
-                />
-            </ThemeProvider>
-        </>
+        <ThemeProvider theme={theme}>
+            <div style={{ height: '50px', margin: '0 auto' }}>
+                <Alert severity='warning'>Our website is currently under development. Thanks for your understanding.</Alert>
+            </div>
+            <Component {...pageProps} />
+            <PalavyrChatWidget
+                disableBounce
+                src={jojo()}
+                fixedPosition={true}
+                containerStyles={containerStyles}
+                resizable
+                onEffect={onEffect}
+                onEffectDependencyArray={[router.pathname]}
+                launcherOpenImg="/brand-images/logo.png"
+                IframeProps={{
+                    style: {
+                        border: '0px solid white',
+                        borderRadius: '6px',
+                        height: '100%',
+                        width: '100%',
+                        zIndex: 1000,
+                    },
+                    id: 'jojos-widget',
+                }}
+                openImgProps={{
+                    style: { padding: '10px', objectFit: 'contain', height: '100%', width: '100%', zIndex: 1000 },
+                }}
+                launcherButtonAdditionalStyles={{
+                    height: '68px',
+                    width: '68px',
+                    borderRadius: '50%',
+                    borderBottomRightRadius: '10px',
+                    background: '#454040',
+                    border: '5px solid white',
+                    boxShadow: '0px 0px 10px #454040',
+                }}
+            />
+        </ThemeProvider>
     );
 }
 

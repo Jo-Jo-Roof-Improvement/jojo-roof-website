@@ -44,7 +44,7 @@ export const Layout = ({ children, pageTitle }: LayoutProps) => {
     return (
         <>
             <PageHead pageTitle={pageTitle} />
-            <FreeQuoteToday ref={quoteRef} />
+            {/* <FreeQuoteToday ref={quoteRef} /> */}
             <NavigationBar ref={ref} imgSrc="/brand-images/logo.png" />
             <div style={{ height: `${height + quoteHeight}px` }} className="w-full h-auto"></div>
             {children}

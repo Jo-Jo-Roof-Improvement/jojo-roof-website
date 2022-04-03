@@ -1,4 +1,5 @@
 import { WideStrip } from '@components/common/strips/WideStrip';
+import { OFFWHITE } from 'styles/theme';
 
 import { TextBlockSection } from '../TextBlockSection';
 import { TitleTextBlock } from '../TitleTextBlock';
@@ -9,7 +10,7 @@ export const SectionThree = () => {
         <WideStrip
             align="center"
             maxHeight=""
-            backgroundColor="rgb(207,207,212)"
+            backgroundColor={OFFWHITE}
             className="flex flex-col items-center w-full lg:flex-row"
         >
             <div className="flex md:w-full lg:hidden">
@@ -22,7 +23,7 @@ export const SectionThree = () => {
                         marginTop=""
                         variant="h4"
                         fontColor="black"
-                        title="WE DELIVER TOP QUALITY WORK AT UNBEATABLE PRICES"
+                        title="We Deliver Top Quality at the Best Prices"
                     />
                 </div>
                 <TextBlockSection
@@ -35,7 +36,7 @@ export const SectionThree = () => {
                 />
                 <TextBlockSection
                     title="Upkeep & Repair"
-                    text="Age and environmental factors can wreak havoc on your roof. Ignoring problems for too long can cause headaches down the road. Start with a free inspection today! "
+                    text="Age and environmental factors can wreak havoc on your roof. Ignoring problems for too long can cause headaches down the road. Start with a free inspection today!"
                 />
             </div>
             <div className="hidden lg:flex m-10">

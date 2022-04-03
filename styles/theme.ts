@@ -18,6 +18,35 @@ export const Breakpoints = {
     xxxl: SCREEN_XXXLARGE,
 };
 
+// strip background colors
+export const LIGHTGRAY = 'lightgray';
+export const OFFWHITE = '#f5f5f5';
+export const NAVBLUE = '#17171D'
+
+
+// Gowun+Dodum&family=Hind+Siliguri
+// fonts
+export const FONT_FAMILIES = [
+    'Gowun Dodum',
+    // 'Hind Siliguri',
+    // 'Roboto',
+    // 'Source Sans Pro',
+    // '-apple-system',
+    // 'BlinkMacSystemFont',
+    // '"Segoe UI"',
+    // '"Helvetica Neue"',
+    // 'Arial',
+    // 'sans-serif',
+    // '"Apple Color Emoji"',
+    // '"Segoe UI Emoji"',
+    // '"Segoe UI Symbol"',
+];
+
+export const PRIMARY_FONT = FONT_FAMILIES[0];
+export const SECONDARY_FONT = FONT_FAMILIES[1];
+export const WET_PAINT_FONT = 'Rubik Wet Paint';
+export const GLITCH_FONT = 'Rubik Glitch';
+
 export const theme = createTheme({
     breakpoints: {
         values: {
@@ -29,19 +58,65 @@ export const theme = createTheme({
         },
     },
     typography: {
-        fontFamily: [
-            'Fjalla One',
-            'Source Sans Pro',
-            '-apple-system',
-            'BlinkMacSystemFont',
-            '"Segoe UI"',
-            'Roboto',
-            '"Helvetica Neue"',
-            'Arial',
-            'sans-serif',
-            '"Apple Color Emoji"',
-            '"Segoe UI Emoji"',
-            '"Segoe UI Symbol"',
-        ].join(','),
+        fontFamily: FONT_FAMILIES.join(','),
+        h1: {
+            fontFamily: 'Gowun Dodum',
+            fontWeight: 400,
+            fontSize: '3.052rem',
+        },
+        h2: {
+            fontFamily: 'Gowun Dodum',
+            fontSize: '2.441rem',
+            fontWeight: 400,
+        },
+        h3: {
+            fontFamily: 'Gowun Dodum',
+            fontSize: '1.953rem',
+            fontWeight: 400,
+        },
+        h4: {
+            fontFamily: 'Gowun Dodum',
+            fontSize: '1.563rem',
+            fontWeight: 400,
+        },
+        h5: {
+            fontFamily: 'Gowun Dodum',
+            fontSize: '1.25rem',
+            fontWeight: 400,
+        },
+        h6: {
+            fontFamily: 'Gowun Dodum',
+            fontSize: '1rem',
+            fontWeight: 400,
+        },
+        subtitle1: {
+            fontFamily: 'Gowun Dodum',
+            fontSize: '0.9',
+            fontWeight: 400,
+        },
+        subtitle2: {
+            fontFamily: 'Gowun Dodum',
+            fontSize: '0.78rem',
+            fontWeight: 400,
+        },
+        body1: {
+            fontFamily: 'Gowun Dodum',
+            fontSize: '1rem',
+            fontWeight: 400,
+        },
+        body2: {
+            fontFamily: 'Gowun Dodum',
+            fontSize: '0.78rem',
+        },
+        button: {
+            fontFamily: 'Gowun Dodum',
+        },
+        caption: {
+            fontFamily: 'Gowun Dodum',
+            fontSize: '0.7rem',
+        },
+        overline: {
+            fontFamily: 'Gowun Dodum',
+        },
     },
 });

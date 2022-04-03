@@ -5,11 +5,12 @@ import { CheckUsOut } from './CheckUsOut';
 import { SocialMediaIcons } from './SocialMediaIcons';
 import { CopyrightStrip } from './CopyrightStrip';
 import { Claims } from './PaulsClaim';
+import { OFFWHITE } from 'styles/theme';
 
 export const Footer = () => {
     return (
         <>
-            <StripBase className="flex flex-col pt-5" backgroundColor="rgb(207,207,212)" height="150px" maxHeight="">
+            <StripBase className="flex flex-col pt-5" backgroundColor={OFFWHITE} height="150px" maxHeight="">
                 <SocialMediaSection>
                     <CheckUsOut />
                     <SocialMediaIcons />

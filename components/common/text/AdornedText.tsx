@@ -1,6 +1,7 @@
 import { Typography } from '@mui/material';
 import { Variant } from '@mui/material/styles/createTypography';
 import classNames from 'classnames';
+import { PRIMARY_FONT, SECONDARY_FONT } from 'styles/theme';
 
 export interface AdornedText {
     text?: string;
@@ -45,7 +46,7 @@ export const AdornedText = ({
         >
             {StartAdornment && <div style={adornmentStyle}>{StartAdornment}</div>}
             <Typography
-                fontFamily={fontVariant === 'primary' ? 'Fjalla One' : 'Source Sans Pro'}
+                fontFamily={fontVariant === 'primary' ? PRIMARY_FONT : SECONDARY_FONT}
                 justifyItems="center"
                 justifyContent="middle"
                 className={classNames('pt-1', textClassName)}

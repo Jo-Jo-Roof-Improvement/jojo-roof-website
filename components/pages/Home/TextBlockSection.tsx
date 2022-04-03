@@ -3,17 +3,27 @@ import { TypographyVariant } from '@mui/material';
 
 import { TitleTextBlock } from './TitleTextBlock';
 
-
 export interface TextBlockSectionProps {
-    title: string;
-    text: string;
+    title: React.ReactNode;
+    text: React.ReactNode;
     titleVariant?: TypographyVariant;
     textVariant?: TypographyVariant;
+    style?: React.CSSProperties;
+    marginTop?: string; // like mt-16
 }
-export const TextBlockSection = ({ title, text, titleVariant = 'h5', textVariant }: TextBlockSectionProps) => {
+export const TextBlockSection = ({
+    title,
+    text,
+    titleVariant = 'h5',
+    textVariant,
+    style,
+    marginTop,
+}: TextBlockSectionProps) => {
     return (
-        <div className="flex flex-col items-center w-full">
-            <TitleTextBlock fontColor="black" title={title} variant={titleVariant} className="pb-2" />
+        <div style={style} className="flex flex-col items-center w-full h-56">
+            <TitleTextBlock marginTop={marginTop} fontColor="black" variant={titleVariant} className="pb-2">
+                {title}
+            </TitleTextBlock>
             <TextBlock paragraph color="black" align="center" variant={textVariant}>
                 {text}
             </TextBlock>

@@ -6,6 +6,7 @@ import { Link, Rating } from '@mui/material';
 import { TextBlock } from '@components/common/text/TextBlock';
 import { ReviewGallery } from '@components/common/reviews/ReviewGallery';
 import SwiperCore, { Pagination, Navigation, Lazy, Controller } from 'swiper';
+import { NAVBLUE, OFFWHITE } from 'styles/theme';
 SwiperCore.use([Pagination, Navigation, Lazy, Controller]);
 
 export interface SectionFiveProps {
@@ -18,12 +19,12 @@ export const SectionFive = ({ reviews }: SectionFiveProps) => {
         ).toFixed(1)
     );
     return (
-        <WideStrip align="center" height="300px" backgroundColor="white" className="flex flex-col justify-center">
+        <WideStrip align="center" height="300px" backgroundColor={OFFWHITE} className="flex flex-col justify-center">
             <TitleTextBlock
                 style={{ marginBottom: '3rem' }}
-                className="bg-white"
-                variant="h3"
-                fontColor="black"
+                className=""
+                variant="h2"
+                fontColor={NAVBLUE}
                 title="What customers are saying"
             />
             <div className="pl-16 pr-16 pb-5 pt-4 mb-10 flex flex-col justify-center items-center border-2">

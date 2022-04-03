@@ -27,3 +27,13 @@ export const ContactUsPage = () => {
         </Layout>
     );
 };
+
+export const MiniContactUsPageForLanding = () => {
+    return (
+        <>
+            <SectionOne />
+            <SectionTwo />
+            <SectionThree />
+        </>
+    );
+};

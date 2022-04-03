@@ -1,0 +1,18 @@
+@import 'styles/theme.scss';
+
+.slideWords {
+    font-weight: bold;
+    letter-spacing: 0.09rem;
+    color: $success-main;
+    // animation: fadeBottom 1s;
+    // animation-fill-mode: forwards;
+}
+
+.slide {
+    padding: 2rem;
+    margin: 0;
+    overflow: hidden;
+    transition: opacity 0.5s;
+    background-color: $primary-dark;
+    border: 1px solid $primary-dark;
+}
