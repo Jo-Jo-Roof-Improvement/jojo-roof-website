@@ -6,7 +6,7 @@ import { TitleTextBlock } from '../Home/TitleTextBlock';
 import { FullWidthImage } from '../Home/TopImage';
 
 export interface ServiceSectionProps {
-    title?: React.ReactNode;
+    title?: string;
     children?: React.ReactNode;
     textColor: string;
     header: string;

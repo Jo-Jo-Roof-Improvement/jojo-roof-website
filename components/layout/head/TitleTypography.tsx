@@ -1,10 +1,13 @@
+import { TextBlock } from '@components/common/text/TextBlock';
+import { TypographyProps } from '@mui/system';
 import React from 'react';
-import { PalavyrText, PalavyrTextProps } from './PalavyrText';
 import cls from './TitleTypography.module.scss';
 
-export interface TitleTypographyProps extends PalavyrTextProps {
+export interface TitleTypographyProps extends TypographyProps {
     children: React.ReactNode;
     display?: 'initial' | 'block' | 'inline' | undefined;
+    variant?: 'h2';
+    align?: 'center';
 }
 
 export const TitleTypography = ({
@@ -15,8 +18,8 @@ export const TitleTypography = ({
     ...rest
 }: TitleTypographyProps) => {
     return (
-        <PalavyrText className={cls.primaryText} variant={variant}  display={display} align ={align} {...rest}>
+        <TextBlock className={cls.primaryText} variant={variant} display={display} align={align} {...rest}>
             {children}
-        </PalavyrText>
+        </TextBlock>
     );
 };

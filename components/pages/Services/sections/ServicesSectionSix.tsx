@@ -24,12 +24,13 @@ export const ServicesSectionSix = () => {
     );
     return (
         <ServiceSection
-            title={<TextBlock style={{ fontSize: '24pt', fontFamily: WET_PAINT_FONT }}>PAINTING</TextBlock>}
             textColor="white"
             header="Is painting your roof tiles necessary?"
             body={body}
             imageSrc="/services/painting.jpg"
             backgroundColor="black"
-        />
+        >
+            <TextBlock style={{ fontSize: '24pt', fontFamily: WET_PAINT_FONT }}>PAINTING</TextBlock>
+        </ServiceSection>
     );
 };
