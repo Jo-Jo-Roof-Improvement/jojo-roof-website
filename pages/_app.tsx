@@ -83,8 +83,18 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     return (
         <ThemeProvider theme={theme}>
-            <div style={{ height: '50px', margin: '0 auto' }}>
-                <Alert severity='warning'>Our website is currently under development. Thanks for your understanding.</Alert>
+            <div
+                style={{
+                    height: '50px',
+                    width: '100%',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    backgroundColor: '#FFF4E5',
+                }}
+            >
+                <Alert severity="warning">
+                    Our website is currently under development. Thanks for your understanding.
+                </Alert>
             </div>
             <Component {...pageProps} />
             <PalavyrChatWidget
