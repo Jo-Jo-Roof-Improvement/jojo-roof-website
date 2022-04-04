@@ -39,7 +39,6 @@ const icons = [
     </div>,
     <Img key={2} src={shield} alt="shield" />,
     <Img key={3} src={warranty} alt="warranty" />,
-    // <Img key={3} src={fraud} alt="fraud" />,
     <div style={{ display: 'flex', flexDirection: 'row' }} key={0}>
         {[1, 2, 3, 4, 5].map((i) => (
             <Img style={{ height: '50px' }} key={3} src={star} alt="star" />
@@ -127,12 +126,12 @@ const items = [
     />,
 ];
 
-export const SectionTwoB = () => {
+export const InfoCards = () => {
     return (
         <WideStrip align="center" height="200px" backgroundColor={OFFWHITE}>
             <Grid container alignContent="center" justifyContent="center">
                 {items.map((item, index) => (
-                    <Grid className={cls.gridItem} xs={5} key={index}>
+                    <Grid item className={cls.gridItem} xs={5} key={index}>
                         <Paper className={cls.paper}>
                             <div className={cls.paperDiv}>
                                 {icons[index]}

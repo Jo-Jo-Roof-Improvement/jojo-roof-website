@@ -3,7 +3,7 @@ import { WideStrip } from '@components/common/strips/WideStrip';
 import { TitleTextBlock } from '../TitleTextBlock';
 import { VideoWithTextBelow } from '../VideoWithTextBelow';
 
-export const SectionTwo = () => {
+export const VideoResults = () => {
     return (
         <WideStrip align="center" maxHeight="">
             <div className="flex flex-col items-center w-full mb-5">

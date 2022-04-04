@@ -1,5 +1,6 @@
 import { WideStrip } from '@components/common/strips/WideStrip';
 import { Divider } from '@mui/material';
+import { OFFWHITE } from 'styles/theme';
 
 import { SuccessInfo } from '../SuccessInfo';
 
@@ -8,7 +9,7 @@ export const AboutUsSectionTwo = () => {
         <WideStrip
             maxHeight=""
             height="300px"
-            backgroundColor="rgb(207,207,212)"
+            backgroundColor={OFFWHITE}
             className="flex flex-col items-center w-full lg:flex-row lg:justify-evenly"
         >
             <LargeScreenSizeLayout />

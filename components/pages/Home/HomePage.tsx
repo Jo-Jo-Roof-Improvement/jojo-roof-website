@@ -4,9 +4,9 @@ import { COMPANYNAME } from 'company';
 import { SectionThree } from './sections/SectionThree';
 import { ServiceSummaries } from './sections/ServiceSummarySection';
 import { SectionOne } from './sections/SectionOne';
-import { SectionTwo } from './sections/SectionTwo';
+import { VideoResults } from './sections/SectionTwo';
 import { InfoStrip_ProfessionalRestoration } from "./sections/InfoStrip_ProfessionalRestoration";
-import { SectionTwoB } from './sections/InfoCardsSection';
+import { InfoCards } from './sections/InfoCardsSection';
 import { SectionFive } from './sections/SectionFive';
 import { GoogleReview } from 'types';
 import { SectionFour } from './sections/SectionFour';
@@ -26,8 +26,8 @@ export const HomePage = ({ galleryPhotoList, reviews }: HomePageProps) => {
             <Header />
             <SectionOne />
             <InfoStrip_ProfessionalRestoration />
-            <SectionTwoB />
-            <SectionTwo />
+            <InfoCards />
+            <VideoResults />
             <SectionThree />
             <ServiceSummaries />
             {/* <ProductSections /> */}
