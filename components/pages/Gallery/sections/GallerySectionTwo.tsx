@@ -5,9 +5,6 @@ export const GallerySectionTwo = () => {
     return (
         <MediumStrip align="center" backgroundColor="white" height="150px">
             <div className="h-full w-2/3 flex flex-col items-center justify-center text-center">
-                <TextBlock align="center" paragraph variant="h4" gutterBottom color="black" className="pb-5">
-                    <i>&ldquo;A picture is worth a thousand words. . .&rdquo;</i>
-                </TextBlock>
                 <TextBlock variant="body1" paragraph gutterBottom className="pb-5">
                     Below you will find a selection of before and after photos. These photos will show you the
                     differences between serviced and unserviced roofs.

@@ -1,3 +1,4 @@
+import { useGoSizes } from '@components/common/hooks/mediaQueries';
 import { WideStrip } from '@components/common/strips/WideStrip';
 import { TextBlock } from '@components/common/text/TextBlock';
 import { Grid, Paper } from '@mui/material';
@@ -7,9 +8,9 @@ import cls from './InfoCardsSection.module.scss';
 
 const gridMargin = '1rem';
 
-const xs = 5;
-
 export const ProductSections = () => {
+    const { goHorizontal } = useGoSizes();
+    const xs = goHorizontal ? 5 : 12;
     return (
         <WideStrip
             align="center"

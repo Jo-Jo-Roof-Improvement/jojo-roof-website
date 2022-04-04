@@ -9,7 +9,7 @@ export const SectionThree = () => {
     return (
         <WideStrip align="center" maxHeight="" backgroundColor={OFFWHITE} className="flex flex-col">
             <TitleTextBlock
-                className="pt-10"
+                className="pt-10 pb-5"
                 marginTop=""
                 variant="h2"
                 fontColor="black"
@@ -22,14 +22,17 @@ export const SectionThree = () => {
                 <div className="pl-5 pr-5 flex flex-col items-center md:w-3/4 pb-10">
                     <div className="w-full">
                         <TextBlockSection
+                            titleVariant='h3'
                             title="Perfect Installs"
                             text="Your roof is your home's main defense against the elements. Let us walk you through the options that will fit your needs and once you feel comfortable with your choice, we will handle the complete restoration."
-                        />
+                            />
                         <TextBlockSection
+                            titleVariant='h3'
                             title="Reliable Updates"
                             text="If you're looking to update or upgrade your roof, we've got you covered. Book a free consultation to discuss our  different types of roofing restoration and environmentally friendly options!"
-                        />
+                            />
                         <TextBlockSection
+                            titleVariant='h3'
                             title="Upkeep & Repair"
                             text="Age and environmental factors can wreak havoc on your roof. Ignoring problems for too long can cause headaches down the road. Start with a free inspection today!"
                         />

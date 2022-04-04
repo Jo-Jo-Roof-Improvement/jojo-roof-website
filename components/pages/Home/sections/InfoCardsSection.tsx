@@ -1,7 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
+import { useGoSizes } from '@components/common/hooks/mediaQueries';
 import { WideStrip } from '@components/common/strips/WideStrip';
 import { TextBlock } from '@components/common/text/TextBlock';
 import { Grid, Paper, Theme } from '@mui/material';
+import classNames from 'classnames';
 import React from 'react';
 import { OFFWHITE } from 'styles/theme';
 import { TextBlockSection } from '../TextBlockSection';
@@ -127,13 +129,15 @@ const items = [
 ];
 
 export const InfoCards = () => {
+    const { goHorizontal, goVertical } = useGoSizes();
+
     return (
         <WideStrip align="center" height="200px" backgroundColor={OFFWHITE}>
             <Grid container alignContent="center" justifyContent="center">
                 {items.map((item, index) => (
-                    <Grid item className={cls.gridItem} xs={5} key={index}>
-                        <Paper className={cls.paper}>
-                            <div className={cls.paperDiv}>
+                    <Grid item className={classNames(cls.gridItem, 'w-full')} xs={goHorizontal ? 5 : 12} key={index}>
+                        <Paper classes={{ root: 'w-full' }} className={classNames(cls.paper, 'w-full')}>
+                            <div className={classNames(cls.paperDiv, 'w-full')}>
                                 {icons[index]}
                                 {item}
                             </div>
