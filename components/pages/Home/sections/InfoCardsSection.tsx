@@ -132,12 +132,22 @@ export const InfoCards = () => {
     const { goHorizontal, goVertical } = useGoSizes();
 
     return (
-        <WideStrip align="center" height="200px" backgroundColor={OFFWHITE}>
+        <WideStrip align="center" backgroundColor={OFFWHITE}>
             <Grid container alignContent="center" justifyContent="center">
                 {items.map((item, index) => (
-                    <Grid item className={classNames(cls.gridItem, 'w-full')} xs={goHorizontal ? 5 : 12} key={index}>
-                        <Paper classes={{ root: 'w-full' }} className={classNames(cls.paper, 'w-full')}>
+                    <Grid item className={classNames(cls.gridItem, 'w-full md:hidden')} xs={12} key={index}>
+                        <Paper className={classNames(cls.paper, 'w-full')}>
                             <div className={classNames(cls.paperDiv, 'w-full')}>
+                                {icons[index]}
+                                {item}
+                            </div>
+                        </Paper>
+                    </Grid>
+                ))}
+                {items.map((item, index) => (
+                    <Grid item className={classNames('hidden md:flex m-2')} xs={5} key={index}>
+                        <Paper classes={{ root: 'm-2 p-2' }} className={classNames(cls.paper, 'm-5')}>
+                            <div className={classNames(cls.paperDiv)}>
                                 {icons[index]}
                                 {item}
                             </div>

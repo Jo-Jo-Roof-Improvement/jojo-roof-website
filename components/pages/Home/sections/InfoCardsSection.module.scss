@@ -1,17 +1,10 @@
 @import 'styles/theme.scss';
 
 .paper {
-    padding: 0.8rem;
     display: flex;
     align-items: center;
-    height: 100%;
-    box-shadow: $shadow-5;
 }
 
-.gridItem {
-    margin: 1.2rem;
-    height: auto;
-}
 
 .paperDiv {
     display: flex;
